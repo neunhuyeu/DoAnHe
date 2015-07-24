@@ -1,0 +1,1209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="splitContainerControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="splitContainerControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 147</value>
+  </data>
+  <data name="splitContainerControl.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>6, 6, 6, 6</value>
+  </data>
+  <data name="nqGroup.Caption" xml:space="preserve">
+    <value>Nội Quy</value>
+  </data>
+  <data name="inboxItem.Caption" xml:space="preserve">
+    <value>Quy định chung</value>
+  </data>
+  <assembly alias="mscorlib" name="mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="inboxItem.SmallImageIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="outboxItem.Caption" xml:space="preserve">
+    <value>Quy định mượn sách</value>
+  </data>
+  <data name="outboxItem.SmallImageIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="draftsItem.Caption" xml:space="preserve">
+    <value>Quy định trả sách</value>
+  </data>
+  <data name="draftsItem.SmallImageIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="trashItem.Caption" xml:space="preserve">
+    <value>Giới thiệu về Thư Viện</value>
+  </data>
+  <data name="trashItem.SmallImageIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="navBarControl.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="appGroup.Caption" xml:space="preserve">
+    <value>Tiện Ích</value>
+  </data>
+  <data name="calendarItem.Caption" xml:space="preserve">
+    <value>Lịch</value>
+  </data>
+  <data name="calendarItem.SmallImageIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="tasksItem.Caption" xml:space="preserve">
+    <value>Trò chơi</value>
+  </data>
+  <data name="tasksItem.SmallImageIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="navBarControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="resource.ExpandedWidth" type="System.Int32, mscorlib">
+    <value>165</value>
+  </data>
+  <data name="navBarControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>165, 473</value>
+  </data>
+  <data name="navBarControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="navBarControl.Text" xml:space="preserve">
+    <value>navBarControl1</value>
+  </data>
+  <data name="&gt;&gt;navBarControl.Name" xml:space="preserve">
+    <value>navBarControl</value>
+  </data>
+  <data name="&gt;&gt;navBarControl.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarControl, DevExpress.XtraNavBar.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;navBarControl.Parent" xml:space="preserve">
+    <value>splitContainerControl.Panel1</value>
+  </data>
+  <data name="&gt;&gt;navBarControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainerControl.Panel1.Text" xml:space="preserve">
+    <value>Panel1</value>
+  </data>
+  <assembly alias="DevExpress.XtraEditors.v11.2" name="DevExpress.XtraEditors.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+  <data name="xtraTabControl1.ClosePageButtonShowMode" type="DevExpress.XtraTab.ClosePageButtonShowMode, DevExpress.XtraEditors.v11.2">
+    <value>InActiveTabPageHeaderAndOnMouseHover</value>
+  </data>
+  <data name="xtraTabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="xtraTabControl1.HeaderButtons" type="DevExpress.XtraTab.TabButtons, DevExpress.XtraEditors.v11.2">
+    <value>Close</value>
+  </data>
+  <data name="xtraTabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="xtraTabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>862, 473</value>
+  </data>
+  <data name="xtraTabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.Name" xml:space="preserve">
+    <value>xtraTabControl1</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraTab.XtraTabControl, DevExpress.XtraEditors.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.Parent" xml:space="preserve">
+    <value>splitContainerControl.Panel2</value>
+  </data>
+  <data name="&gt;&gt;xtraTabControl1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="splitContainerControl.Panel2.Text" xml:space="preserve">
+    <value>Panel2</value>
+  </data>
+  <data name="splitContainerControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1043, 485</value>
+  </data>
+  <data name="splitContainerControl.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="splitContainerControl.Text" xml:space="preserve">
+    <value>splitContainerControl1</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl.Name" xml:space="preserve">
+    <value>splitContainerControl</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.SplitContainerControl, DevExpress.Utils.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;splitContainerControl.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="ribbonControl.ApplicationButtonText" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="siStatus.Caption" xml:space="preserve">
+    <value>Thông Tin: </value>
+  </data>
+  <data name="siInfo.Caption" xml:space="preserve">
+    <value>Chào mừng bạn đã sử dụng phần mềm Quản Lý Thư Viện ĐH CN Hà Nội !</value>
+  </data>
+  <data name="iBoldFontStyle.Caption" xml:space="preserve">
+    <value>Bold</value>
+  </data>
+  <data name="iItalicFontStyle.Caption" xml:space="preserve">
+    <value>Italic</value>
+  </data>
+  <data name="iUnderlinedFontStyle.Caption" xml:space="preserve">
+    <value>Underlined</value>
+  </data>
+  <data name="iLeftTextAlign.Caption" xml:space="preserve">
+    <value>Left</value>
+  </data>
+  <data name="iCenterTextAlign.Caption" xml:space="preserve">
+    <value>Center</value>
+  </data>
+  <data name="iRightTextAlign.Caption" xml:space="preserve">
+    <value>Right</value>
+  </data>
+  <data name="rgbiSkins.Caption" xml:space="preserve">
+    <value>Skins</value>
+  </data>
+  <data name="btnttBanThan.Caption" xml:space="preserve">
+    <value>Thông Tin Bản Thân</value>
+  </data>
+  <data name="btnttBanThan.LargeWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="btnDoiMatKhau.Caption" xml:space="preserve">
+    <value>Đổi Mật Khẩu</value>
+  </data>
+  <data name="btnDoiMatKhau.LargeWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="btndsNhanVien.Caption" xml:space="preserve">
+    <value>Danh Sách Nhân Viên</value>
+  </data>
+  <data name="btndsNhanVien.LargeWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="btnHuongDan.Caption" xml:space="preserve">
+    <value>Hướng Dẫn</value>
+  </data>
+  <data name="btnHuongDan.LargeWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="btnDangXuat.Caption" xml:space="preserve">
+    <value>Đăng Xuất</value>
+  </data>
+  <data name="btnDangXuat.LargeWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="btnttCaNhan.Caption" xml:space="preserve">
+    <value>Thông Tin Cá Nhân</value>
+  </data>
+  <data name="btnttCaNhan.LargeWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="btnDoiMK.Caption" xml:space="preserve">
+    <value>Đổi Mật Khẩu</value>
+  </data>
+  <data name="btnDoiMK.LargeWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="btnqlNhanVien.Caption" xml:space="preserve">
+    <value>Thông Tin Nhân Viên</value>
+  </data>
+  <data name="btnqlNhanVien.LargeWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="btnqlDocGia.Caption" xml:space="preserve">
+    <value>Thông Tin Độc Giả</value>
+  </data>
+  <data name="btnqlDocGia.LargeWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="btnqlSach.Caption" xml:space="preserve">
+    <value>Thông Tin Sách</value>
+  </data>
+  <data name="btnqlSach.LargeWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="btnqlTacGia.Caption" xml:space="preserve">
+    <value>Thông Tin Tác Giả</value>
+  </data>
+  <data name="btnqlTacGia.LargeWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="btnqlTheLoai.Caption" xml:space="preserve">
+    <value>Thông Tin Thể Loại</value>
+  </data>
+  <data name="btnqlTheLoai.LargeWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="btnqlNXB.Caption" xml:space="preserve">
+    <value>Thông Tin Nhà Xuất Bản</value>
+  </data>
+  <data name="btnqlNXB.LargeWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="btnPhieuMuon.Caption" xml:space="preserve">
+    <value>Phiếu Mượn</value>
+  </data>
+  <data name="btnPhieuMuon.LargeWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="btnPhieuTra.Caption" xml:space="preserve">
+    <value>Phiếu Trả</value>
+  </data>
+  <data name="btnPhieuTra.LargeWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="btnPhieuNopPhat.Caption" xml:space="preserve">
+    <value>Lượt Mượn</value>
+  </data>
+  <data name="btnPhieuNopPhat.LargeWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="btnQH.Caption" xml:space="preserve">
+    <value>Mượn Sách Quá Hạn</value>
+  </data>
+  <data name="btnQH.LargeWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="btnttSach.Caption" xml:space="preserve">
+    <value>Thông Tin Sách</value>
+  </data>
+  <data name="btnttSach.LargeWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="btnttTacGia.Caption" xml:space="preserve">
+    <value>Thông Tin Tác Giả</value>
+  </data>
+  <data name="btnttTacGia.LargeWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="btnttTheLoai.Caption" xml:space="preserve">
+    <value>Thông Tin Thể Loại</value>
+  </data>
+  <data name="btnttTheLoai.LargeWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="btnttNXB.Caption" xml:space="preserve">
+    <value>Thông TinNhà Xuất Bản</value>
+  </data>
+  <data name="btnttNXB.LargeWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="btnttDocGia.Caption" xml:space="preserve">
+    <value>Độc Giả</value>
+  </data>
+  <data name="btnttDocGia.LargeWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="btntkSach.Caption" xml:space="preserve">
+    <value>Tìm Kiếm Sách</value>
+  </data>
+  <data name="btntkSach.LargeWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="btntkDocGia.Caption" xml:space="preserve">
+    <value>Tìm Kiếm Độc Giả</value>
+  </data>
+  <data name="btntkDocGia.LargeWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="btntkDocGia.SmallWithoutTextWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="btnbcSach.Caption" xml:space="preserve">
+    <value>Reports Trả Sách</value>
+  </data>
+  <data name="btnbcSach.LargeWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="btnDocGia.Caption" xml:space="preserve">
+    <value>Reports Độc Giả</value>
+  </data>
+  <data name="btnDocGia.LargeWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="btnAbout.Caption" xml:space="preserve">
+    <value>Nhóm SV thực hiện</value>
+  </data>
+  <data name="btnAbout.LargeWidth" type="System.Int32, mscorlib">
+    <value>100</value>
+  </data>
+  <data name="barButtonItem1.Caption" xml:space="preserve">
+    <value>barButtonItem1</value>
+  </data>
+  <data name="btnDangNhap.Caption" xml:space="preserve">
+    <value>Đăng Nhập</value>
+  </data>
+  <data name="btnSachChuaDuocMuon.Caption" xml:space="preserve">
+    <value>Sách Chưa Mượn</value>
+  </data>
+  <data name="btnSachChuaDuocMuon.LargeWidth" type="System.Int32, mscorlib">
+    <value>80</value>
+  </data>
+  <data name="ribbonControl.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="TaiKhoanRibbonPageGroup.Text" xml:space="preserve">
+    <value>Tài khoản</value>
+  </data>
+  <data name="skinsRibbonPageGroup.Text" xml:space="preserve">
+    <value>Giao diện</value>
+  </data>
+  <data name="exitRibbonPageGroup.Text" xml:space="preserve">
+    <value>Hệ thống</value>
+  </data>
+  <data name="homeRibbonPage.Text" xml:space="preserve">
+    <value>Trang Chính</value>
+  </data>
+  <data name="helpRibbonPage.Text" xml:space="preserve">
+    <value>Quản Lý</value>
+  </data>
+  <data name="ribbonPageGroup3.Text" xml:space="preserve">
+    <value>Quản lý</value>
+  </data>
+  <data name="ribbonPageGroup4.Text" xml:space="preserve">
+    <value>Theo dõi</value>
+  </data>
+  <data name="ribbonPage1.Text" xml:space="preserve">
+    <value>Mượn Trả</value>
+  </data>
+  <data name="ribbonPage2.Text" xml:space="preserve">
+    <value>Tra Cứu</value>
+  </data>
+  <data name="ribbonPage3.Text" xml:space="preserve">
+    <value>Tìm Kiếm</value>
+  </data>
+  <data name="ribbonPage5.Text" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="ribbonPage4.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="ribbonControl.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1043, 147</value>
+  </data>
+  <data name="ribbonStatusBar.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 632</value>
+  </data>
+  <data name="ribbonStatusBar.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1043, 23</value>
+  </data>
+  <data name="&gt;&gt;ribbonStatusBar.Name" xml:space="preserve">
+    <value>ribbonStatusBar</value>
+  </data>
+  <data name="&gt;&gt;ribbonStatusBar.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonStatusBar, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonStatusBar.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ribbonStatusBar.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;ribbonControl.Name" xml:space="preserve">
+    <value>ribbonControl</value>
+  </data>
+  <data name="&gt;&gt;ribbonControl.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonControl, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonControl.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;ribbonControl.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="popupControlContainer2.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="buttonEdit.EditValue" xml:space="preserve">
+    <value>Some Text</value>
+  </data>
+  <data name="buttonEdit.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="buttonEdit.Size" type="System.Drawing.Size, System.Drawing">
+    <value>100, 20</value>
+  </data>
+  <data name="buttonEdit.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;buttonEdit.Name" xml:space="preserve">
+    <value>buttonEdit</value>
+  </data>
+  <data name="&gt;&gt;buttonEdit.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.ButtonEdit, DevExpress.XtraEditors.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;buttonEdit.Parent" xml:space="preserve">
+    <value>popupControlContainer2</value>
+  </data>
+  <data name="&gt;&gt;buttonEdit.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="popupControlContainer2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>316, 258</value>
+  </data>
+  <data name="popupControlContainer2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>118, 28</value>
+  </data>
+  <data name="popupControlContainer2.TabIndex" type="System.Int32, mscorlib">
+    <value>5</value>
+  </data>
+  <data name="popupControlContainer2.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;popupControlContainer2.Name" xml:space="preserve">
+    <value>popupControlContainer2</value>
+  </data>
+  <data name="&gt;&gt;popupControlContainer2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.PopupControlContainer, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;popupControlContainer2.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;popupControlContainer2.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="popupControlContainer1.Appearance.BackColor" type="System.Drawing.Color, System.Drawing">
+    <value>Transparent</value>
+  </data>
+  <data name="someLabelControl2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 57</value>
+  </data>
+  <data name="someLabelControl2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 13</value>
+  </data>
+  <data name="someLabelControl2.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="someLabelControl2.Text" xml:space="preserve">
+    <value>Some Info</value>
+  </data>
+  <data name="&gt;&gt;someLabelControl2.Name" xml:space="preserve">
+    <value>someLabelControl2</value>
+  </data>
+  <data name="&gt;&gt;someLabelControl2.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;someLabelControl2.Parent" xml:space="preserve">
+    <value>popupControlContainer1</value>
+  </data>
+  <data name="&gt;&gt;someLabelControl2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="someLabelControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
+  </data>
+  <data name="someLabelControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>49, 13</value>
+  </data>
+  <data name="someLabelControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="someLabelControl1.Text" xml:space="preserve">
+    <value>Some Info</value>
+  </data>
+  <data name="&gt;&gt;someLabelControl1.Name" xml:space="preserve">
+    <value>someLabelControl1</value>
+  </data>
+  <data name="&gt;&gt;someLabelControl1.Type" xml:space="preserve">
+    <value>DevExpress.XtraEditors.LabelControl, DevExpress.XtraEditors.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;someLabelControl1.Parent" xml:space="preserve">
+    <value>popupControlContainer1</value>
+  </data>
+  <data name="&gt;&gt;someLabelControl1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="popupControlContainer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>208, 168</value>
+  </data>
+  <data name="popupControlContainer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>76, 70</value>
+  </data>
+  <data name="popupControlContainer1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
+  </data>
+  <data name="popupControlContainer1.Visible" type="System.Boolean, mscorlib">
+    <value>False</value>
+  </data>
+  <data name="&gt;&gt;popupControlContainer1.Name" xml:space="preserve">
+    <value>popupControlContainer1</value>
+  </data>
+  <data name="&gt;&gt;popupControlContainer1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.PopupControlContainer, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;popupControlContainer1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;popupControlContainer1.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <metadata name="defaultLookAndFeel1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>25</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>6, 13</value>
+  </data>
+  <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
+    <value>1043, 655</value>
+  </data>
+  <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        AAABAAIAEBAAAAAAIABoBAAAJgAAACAgAAAAACAAqBAAAI4EAAAoAAAAEAAAACAAAAABACAAAAAAAEAE
+        AAAAAAAAAAAAAAAAAAAAAAAA////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wFPEQAtNQwAWQAA
+        ABP///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wF6Mx9J0aaC99mx
+        iv1bLiGJAAAAFf///wH///8B////Af///wH///8B////Af///wH///8B////Af///wF2KRVHwY5p99ih
+        VP/irV3/06R3/VYmGYkAAAAV////Af///wH///8B////Af///wH///8B////Af///wFxJA5HrW9K98SG
+        Qf/Ok0r/159T/+GsXP/IkmL9Uh8RiQAAABX///8B////Af///wH///8B////Af///wFvIQtHnlc09bBs
+        Lf+6eTb/w4U//82SSf/XnlL/4Ktb/8CFVP1RHA2JAAAAFf///wH///8B////Af///wFtHwlHkkYk9ZxS
+        Gf+nYSb/tXc8/8GITv/IkFH/zZRO/9adUf/fqlr/vH5M/VAaCokAAAAV////Af///wF/KRI5j0Um9Yk7
+        Cf+maDz/vY1o/8aZc//Monr/0qqA/9iyhv/Zr3r/16Jb/96oWv++gVD9UhwOiQAAABX///8BmVE8j4s/
+        FP+wfV//wJd8/8aegv/Mp4z/zKaR/8ylj/3bvJ3/4MCe/+TFoP/dsHT/3qdZ/8OLW/1VIROJAAAAFXwd
+        Ah29jn7bza2b/8yrmP/Qsp//wpiJ2XsbAid7GwAbvo5+yeTNtv/nz7X/6tS5/+C5hf/dplj/yZZo/VMf
+        Emv///8BfR4EHcyonNvfyr7/y6id2XgaABn///8B////AXsbAA/GnpDL7d3O/+7ezf/x4tD/4bmF/9us
+        b/+TSzhx////Af///wF9HwQZuIZ4eXsbABf///8B////Af///wH///8BexsAD86roMv17eX/9u3k//fu
+        5f+udGCpexsAA////wH///8B////Af///wH///8B////Af///wH///8B////Af///wF7GwAP0rKpy/r2
+        9P++kIOrexsAA////wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AXsb
+        AAl8HgM7exsAA////wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////AQAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA
+        //8AAP//AAD//wAA//8AAP//AAD//wAA//8oAAAAIAAAAEAAAAABACAAAAAAAIAQAAAAAAAAAAAAAAAA
+        AAAAAAAA////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8BAAAADQAAACcAAAAnAAAAC////wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////ATgMABtbFACNWxUCrR4GAGsAAAA3AAAADf//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wFIDwAjjEAr4+XOvP/u28j/nVxJ9y0J
+        AHsAAAA3AAAADf///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BRw8AIYo+KeHq0rn/469h/+e0
+        Yv/x2bT/nl1K9y0JAHsAAAA5AAAADf///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AUkQACGGNyLf3L6j/9mi
+        V//eqFn/4q5e/+e0Yv/pyqP/mVVC9S0JAHsAAAA5AAAADf///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wFHDwAfgzEb3c+m
+        i//PlU3/1JpP/9ihVP/dp1j/4q1d/+ezYv/hvJP/lE059S0JAHsAAAA5AAAADf///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8BRw8AH4At
+        F93BkXX/xYdD/8mNRf/OlEr/05pP/9igU//dplj/4q1d/+azYf/ZroL/kEYx9S0JAHsAAAA5AAAADf//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AUUP
+        ACF+KhPbtXxf/7t6OP/AgDz/xIdA/8mNRf/Ok0r/05lO/9egU//cplj/4axc/+ayYf/RoHP/iz0o9S0J
+        AHsAAAA5AAAADf///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wFFDwAhfSkR261uUf+wbS//tXMy/7p5N/+/gDv/xIZA/8mMRP/Nkkn/0plO/9efU//cpVf/4axc/+Wy
+        YP/MmGr/iDkj9S4KAHsAAAA5AAAADf///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8BRQ8AIXwnD9ulYkb/pmAk/6tmKP+wbC3/tXMx/7p5Nv+/fzv/w4U//8iMRP/Nkkn/0phN/9ee
+        Uv/bpVf/4Ktb/+WxYP/IkGL/hzYf9S4KAHsAAAA5AAAADf///wH///8B////Af///wH///8B////Af//
+        /wH///8B////AUUPACF8Jg7bnlg7/51TG/+hWR7/pl8j/6tmKP+wbCz/tXIx/7l4Nv++fzr/w4U//8iL
+        RP/NkUj/0ZhN/9aeUv/bpFb/4Kpb/+WxYP/EjF3/hTIb9S8KAHsAAAA5AAAADf///wH///8B////Af//
+        /wH///8B////Af///wFFDwAheiQM25pRNf+TRhL/l0wV/5xSGf+hWB7/q2gv/7R4Qv+9hlL/xZJi/8qY
+        Zv/LmGL/zZph/82YWf/Mkkr/0ZdN/9adUf/ao1b/36pa/+SwX//DiVr/hDAY9S8KAHsAAAA5AAAADf//
+        /wH///8B////Af///wH///8BZRYAF30nENucVz3/iDoI/40/C/+SRRD/n1km/7R9Uv/BkGr/w5Rt/8eZ
+        cf/KnnT/zaJ3/9Cme//Uqn7/16+C/9mxgv/XqG//051X/9WdUf/ao1X/36la/+SvX//FjF7/hTMc9S8K
+        AHsAAAA5AAAADf///wH///8B////Af///wGCLBTLoWFH/4IyA/+DMgH/jUER/611UP+8jW3/v5Jx/8KV
+        c//Gmnf/yZ56/8yiff/OpoD/0aqE/9Suhv/Ysor/27aN/926kP/gvZL/2q51/9WdUv/aolX/3qla/+Ov
+        Xv/JlGf/iDYg9S8KAHsAAAA5AAAADf///wH///8BexsANaBdSf+DMgT/gjAA/45EGf+1hWj/vZF1/7+V
+        eP/DmXz/xZx+/8iggf/LpIT/zqeI/9Kvkv/Uspf/1rOR/9m2k//buZb/3r2Z/+HAm//jxJ//48CU/9im
+        Y//ZolX/3qhZ/+OuXv/OnHH/ijsl9y8KAHsAAAA5AAAADf///wF7GwATnFVB+ZJKI/+WUir/vpR8/8GY
+        gf/BmoL/xJyE/8egh//Jo4n/zKeN/9Oznv/YvbL/uoh7/7J6a/vUtaz/3sOv/92+n//fwaL/4sSk/+TH
+        p//myqn/6M2q/9utb//ZoVT/3qdZ/+KuXf/TpXv/jkEr9zAKAH0AAAA5AAAAC////wF8HQJvuIV3/8+w
+        nv/IpJD/yKSQ/8mlkf/JpZH/y6mU/82slf/Xu6r/xJqP/3scA4F7GwAZexsADXsbAF+wd2f35M6+/+HG
+        q//jya3/5cyw/+fOsv/p0bX/69O1/92yev/YoVT/3adY/+KtXf/YrYT/kEUw9zEKAHsAAAAn////Af//
+        /wF9HgRzzaqf/9e9r//PsZ//0LGg/9CxoP/QsqH/2sK0/8qlmv94GgBl////Af///wH///8B////AXsb
+        ADe1f2/36dfK/+XOt//n0bn/6dO7/+vWvv/s2L//7trB/+C5hv/YoFP/3aZY/+GtXf/dt47/gzYi4QAA
+        ACf///8B////Af///wF9HgRz07Sr/97JvP/Xvq//176v/+DMwf/Qr6X/eBoAZf///wH///8B////Af//
+        /wH///8B////AXsbADm5iHn57uDV/+rXxP/r2MX/7NvH/+7cyf/v38v/8eDM/9+1fv/Xn1P/3KZX/+Gw
+        av+mZlX9OAwAFf///wH///8B////Af///wF9HgRz2Ly0/+bWzf/o2dD/1biw/3gaAGX///8B////Af//
+        /wH///8B////Af///wH///8B////AXsbADm9joH58ujf/+7f0P/v4dL/8OLT//Lk1f/y5dX/8+XU/9ut
+        cf/Xoln/2ruk/4ItFa////8B////Af///wH///8B////Af///wF9HwRluop877iEdu17GwBX////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////AXsbADnClor59u/o//Ln3f/z6N3/9Orf//Xr
+        4P/27OH/9ena/+PLuf+IMxzLexsADf///wH///8B////Af///wH///8B////Af///wF7GwADexsAA///
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AXsbADvGnZL7+fXx//fw
+        6f/38er/+PHq//nz7f/48+//l0870XsbAA3///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////AXsb
+        ADvIoJX7/Pr4//v49v/8+fb/+vbz/5tUQdN7GwAN////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////AXsbADvIoZX7/Pn3//fx7v+eWUfRexsADf///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////AXsbACF9IQaHexsAYXsbAAn///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af///wH///8B////Af//
+        /wH///8B////Af///wH///8B////AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+</value>
+  </data>
+  <data name="$this.StartPosition" type="System.Windows.Forms.FormStartPosition, System.Windows.Forms">
+    <value>CenterScreen</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>Phần Mềm Quản Lý Thư Viện ĐH Công Nghiệp HN</value>
+  </data>
+  <data name="&gt;&gt;nqGroup.Name" xml:space="preserve">
+    <value>nqGroup</value>
+  </data>
+  <data name="&gt;&gt;nqGroup.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarGroup, DevExpress.XtraNavBar.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;inboxItem.Name" xml:space="preserve">
+    <value>inboxItem</value>
+  </data>
+  <data name="&gt;&gt;inboxItem.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;outboxItem.Name" xml:space="preserve">
+    <value>outboxItem</value>
+  </data>
+  <data name="&gt;&gt;outboxItem.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;draftsItem.Name" xml:space="preserve">
+    <value>draftsItem</value>
+  </data>
+  <data name="&gt;&gt;draftsItem.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;trashItem.Name" xml:space="preserve">
+    <value>trashItem</value>
+  </data>
+  <data name="&gt;&gt;trashItem.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;appGroup.Name" xml:space="preserve">
+    <value>appGroup</value>
+  </data>
+  <data name="&gt;&gt;appGroup.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarGroup, DevExpress.XtraNavBar.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;calendarItem.Name" xml:space="preserve">
+    <value>calendarItem</value>
+  </data>
+  <data name="&gt;&gt;calendarItem.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;tasksItem.Name" xml:space="preserve">
+    <value>tasksItem</value>
+  </data>
+  <data name="&gt;&gt;tasksItem.Type" xml:space="preserve">
+    <value>DevExpress.XtraNavBar.NavBarItem, DevExpress.XtraNavBar.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;siStatus.Name" xml:space="preserve">
+    <value>siStatus</value>
+  </data>
+  <data name="&gt;&gt;siStatus.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarStaticItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;siInfo.Name" xml:space="preserve">
+    <value>siInfo</value>
+  </data>
+  <data name="&gt;&gt;siInfo.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarStaticItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;iBoldFontStyle.Name" xml:space="preserve">
+    <value>iBoldFontStyle</value>
+  </data>
+  <data name="&gt;&gt;iBoldFontStyle.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;iItalicFontStyle.Name" xml:space="preserve">
+    <value>iItalicFontStyle</value>
+  </data>
+  <data name="&gt;&gt;iItalicFontStyle.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;iUnderlinedFontStyle.Name" xml:space="preserve">
+    <value>iUnderlinedFontStyle</value>
+  </data>
+  <data name="&gt;&gt;iUnderlinedFontStyle.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;iLeftTextAlign.Name" xml:space="preserve">
+    <value>iLeftTextAlign</value>
+  </data>
+  <data name="&gt;&gt;iLeftTextAlign.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;iCenterTextAlign.Name" xml:space="preserve">
+    <value>iCenterTextAlign</value>
+  </data>
+  <data name="&gt;&gt;iCenterTextAlign.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;iRightTextAlign.Name" xml:space="preserve">
+    <value>iRightTextAlign</value>
+  </data>
+  <data name="&gt;&gt;iRightTextAlign.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;rgbiSkins.Name" xml:space="preserve">
+    <value>rgbiSkins</value>
+  </data>
+  <data name="&gt;&gt;rgbiSkins.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.RibbonGalleryBarItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnttBanThan.Name" xml:space="preserve">
+    <value>btnttBanThan</value>
+  </data>
+  <data name="&gt;&gt;btnttBanThan.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnDoiMatKhau.Name" xml:space="preserve">
+    <value>btnDoiMatKhau</value>
+  </data>
+  <data name="&gt;&gt;btnDoiMatKhau.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btndsNhanVien.Name" xml:space="preserve">
+    <value>btndsNhanVien</value>
+  </data>
+  <data name="&gt;&gt;btndsNhanVien.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnHuongDan.Name" xml:space="preserve">
+    <value>btnHuongDan</value>
+  </data>
+  <data name="&gt;&gt;btnHuongDan.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnDangXuat.Name" xml:space="preserve">
+    <value>btnDangXuat</value>
+  </data>
+  <data name="&gt;&gt;btnDangXuat.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnttCaNhan.Name" xml:space="preserve">
+    <value>btnttCaNhan</value>
+  </data>
+  <data name="&gt;&gt;btnttCaNhan.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnDoiMK.Name" xml:space="preserve">
+    <value>btnDoiMK</value>
+  </data>
+  <data name="&gt;&gt;btnDoiMK.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnqlNhanVien.Name" xml:space="preserve">
+    <value>btnqlNhanVien</value>
+  </data>
+  <data name="&gt;&gt;btnqlNhanVien.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnqlDocGia.Name" xml:space="preserve">
+    <value>btnqlDocGia</value>
+  </data>
+  <data name="&gt;&gt;btnqlDocGia.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnqlSach.Name" xml:space="preserve">
+    <value>btnqlSach</value>
+  </data>
+  <data name="&gt;&gt;btnqlSach.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnqlTacGia.Name" xml:space="preserve">
+    <value>btnqlTacGia</value>
+  </data>
+  <data name="&gt;&gt;btnqlTacGia.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnqlTheLoai.Name" xml:space="preserve">
+    <value>btnqlTheLoai</value>
+  </data>
+  <data name="&gt;&gt;btnqlTheLoai.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnqlNXB.Name" xml:space="preserve">
+    <value>btnqlNXB</value>
+  </data>
+  <data name="&gt;&gt;btnqlNXB.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnPhieuMuon.Name" xml:space="preserve">
+    <value>btnPhieuMuon</value>
+  </data>
+  <data name="&gt;&gt;btnPhieuMuon.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnPhieuTra.Name" xml:space="preserve">
+    <value>btnPhieuTra</value>
+  </data>
+  <data name="&gt;&gt;btnPhieuTra.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnPhieuNopPhat.Name" xml:space="preserve">
+    <value>btnPhieuNopPhat</value>
+  </data>
+  <data name="&gt;&gt;btnPhieuNopPhat.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnQH.Name" xml:space="preserve">
+    <value>btnQH</value>
+  </data>
+  <data name="&gt;&gt;btnQH.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnttSach.Name" xml:space="preserve">
+    <value>btnttSach</value>
+  </data>
+  <data name="&gt;&gt;btnttSach.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnttTacGia.Name" xml:space="preserve">
+    <value>btnttTacGia</value>
+  </data>
+  <data name="&gt;&gt;btnttTacGia.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnttTheLoai.Name" xml:space="preserve">
+    <value>btnttTheLoai</value>
+  </data>
+  <data name="&gt;&gt;btnttTheLoai.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnttNXB.Name" xml:space="preserve">
+    <value>btnttNXB</value>
+  </data>
+  <data name="&gt;&gt;btnttNXB.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnttDocGia.Name" xml:space="preserve">
+    <value>btnttDocGia</value>
+  </data>
+  <data name="&gt;&gt;btnttDocGia.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btntkSach.Name" xml:space="preserve">
+    <value>btntkSach</value>
+  </data>
+  <data name="&gt;&gt;btntkSach.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btntkDocGia.Name" xml:space="preserve">
+    <value>btntkDocGia</value>
+  </data>
+  <data name="&gt;&gt;btntkDocGia.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnbcSach.Name" xml:space="preserve">
+    <value>btnbcSach</value>
+  </data>
+  <data name="&gt;&gt;btnbcSach.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnDocGia.Name" xml:space="preserve">
+    <value>btnDocGia</value>
+  </data>
+  <data name="&gt;&gt;btnDocGia.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnAbout.Name" xml:space="preserve">
+    <value>btnAbout</value>
+  </data>
+  <data name="&gt;&gt;btnAbout.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem1.Name" xml:space="preserve">
+    <value>barButtonItem1</value>
+  </data>
+  <data name="&gt;&gt;barButtonItem1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnDangNhap.Name" xml:space="preserve">
+    <value>btnDangNhap</value>
+  </data>
+  <data name="&gt;&gt;btnDangNhap.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;btnSachChuaDuocMuon.Name" xml:space="preserve">
+    <value>btnSachChuaDuocMuon</value>
+  </data>
+  <data name="&gt;&gt;btnSachChuaDuocMuon.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.BarButtonItem, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;homeRibbonPage.Name" xml:space="preserve">
+    <value>homeRibbonPage</value>
+  </data>
+  <data name="&gt;&gt;homeRibbonPage.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;TaiKhoanRibbonPageGroup.Name" xml:space="preserve">
+    <value>TaiKhoanRibbonPageGroup</value>
+  </data>
+  <data name="&gt;&gt;TaiKhoanRibbonPageGroup.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;skinsRibbonPageGroup.Name" xml:space="preserve">
+    <value>skinsRibbonPageGroup</value>
+  </data>
+  <data name="&gt;&gt;skinsRibbonPageGroup.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;exitRibbonPageGroup.Name" xml:space="preserve">
+    <value>exitRibbonPageGroup</value>
+  </data>
+  <data name="&gt;&gt;exitRibbonPageGroup.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;helpRibbonPage.Name" xml:space="preserve">
+    <value>helpRibbonPage</value>
+  </data>
+  <data name="&gt;&gt;helpRibbonPage.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;helpRibbonPageGroup.Name" xml:space="preserve">
+    <value>helpRibbonPageGroup</value>
+  </data>
+  <data name="&gt;&gt;helpRibbonPageGroup.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup1.Name" xml:space="preserve">
+    <value>ribbonPageGroup1</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup2.Name" xml:space="preserve">
+    <value>ribbonPageGroup2</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage1.Name" xml:space="preserve">
+    <value>ribbonPage1</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage1.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup3.Name" xml:space="preserve">
+    <value>ribbonPageGroup3</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup3.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup4.Name" xml:space="preserve">
+    <value>ribbonPageGroup4</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup4.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage2.Name" xml:space="preserve">
+    <value>ribbonPage2</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage2.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup5.Name" xml:space="preserve">
+    <value>ribbonPageGroup5</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup5.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup6.Name" xml:space="preserve">
+    <value>ribbonPageGroup6</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup6.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage3.Name" xml:space="preserve">
+    <value>ribbonPage3</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage3.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup7.Name" xml:space="preserve">
+    <value>ribbonPageGroup7</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup7.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup8.Name" xml:space="preserve">
+    <value>ribbonPageGroup8</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup8.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage5.Name" xml:space="preserve">
+    <value>ribbonPage5</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage5.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup9.Name" xml:space="preserve">
+    <value>ribbonPageGroup9</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup9.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup10.Name" xml:space="preserve">
+    <value>ribbonPageGroup10</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup10.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage4.Name" xml:space="preserve">
+    <value>ribbonPage4</value>
+  </data>
+  <data name="&gt;&gt;ribbonPage4.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPage, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup11.Name" xml:space="preserve">
+    <value>ribbonPageGroup11</value>
+  </data>
+  <data name="&gt;&gt;ribbonPageGroup11.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonPageGroup, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;defaultLookAndFeel1.Name" xml:space="preserve">
+    <value>defaultLookAndFeel1</value>
+  </data>
+  <data name="&gt;&gt;defaultLookAndFeel1.Type" xml:space="preserve">
+    <value>DevExpress.LookAndFeel.DefaultLookAndFeel, DevExpress.Utils.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>TrangChu</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>DevExpress.XtraBars.Ribbon.RibbonForm, DevExpress.XtraBars.v11.2, Version=11.2.11.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a</value>
+  </data>
+</root>
