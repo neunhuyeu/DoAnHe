@@ -91,6 +91,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddTab\AddTab.cs" />
+    <Compile Include="DAL\CTPhieuMuon_DAL.cs" />
+    <Compile Include="DAL\DocGia_DAL.cs" />
+    <Compile Include="DAL\NhanVien_DAL.cs" />
+    <Compile Include="DAL\NXB_DAL.cs" />
+    <Compile Include="DAL\PhieuMuon_DAL.cs" />
+    <Compile Include="DAL\Sach_DAL.cs" />
+    <Compile Include="DAL\TacGia_DAL.cs" />
+    <Compile Include="DAL\TheLoai_DAL.cs" />
+    <Compile Include="DAL\TraSach_DAL.cs" />
     <Compile Include="DangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -306,6 +315,7 @@
     <EmbeddedResource Include="Reports\rptDocGia.rdlc" />
     <EmbeddedResource Include="TrangChu.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="TrangChu.vi-VN.resx">
       <DependentUpon>TrangChu.cs</DependentUpon>

@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace QLTV.DTO
 {
-    class TheLoai_DTO
+    public class TheLoai_DTO
     {
         string _MaTL;
 

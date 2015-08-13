@@ -267,6 +267,7 @@
             this.ribbonPage4});
             this.ribbonControl.RibbonStyle = DevExpress.XtraBars.Ribbon.RibbonControlStyle.Office2007;
             this.ribbonControl.StatusBar = this.ribbonStatusBar;
+            this.ribbonControl.Click += new System.EventHandler(this.ribbonControl_Click);
             // 
             // siStatus
             // 
@@ -281,6 +282,7 @@
             this.siInfo.Id = 32;
             this.siInfo.Name = "siInfo";
             this.siInfo.TextAlignment = System.Drawing.StringAlignment.Near;
+            this.siInfo.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.siInfo_ItemClick);
             // 
             // iBoldFontStyle
             // 

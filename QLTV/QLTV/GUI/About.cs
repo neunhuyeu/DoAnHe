@@ -21,7 +21,8 @@ namespace QLTV.Use_Control
         private void About_Load(object sender, EventArgs e)
         {
             //Chen Flash vao Control
-            flash.Movie = Application.StartupPath + "\\banner.swf";
+            flash.Movie = Application.StartupPath + "\\banner.jpg";
+            
             //Hieu ung Chu Chay
             A = labelControl1.Text;
             B = labelControl2.Text;

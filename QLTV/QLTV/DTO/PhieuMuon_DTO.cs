@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace QLTV.DTO
 {
-    class PhieuMuon_DTO
+    public class PhieuMuon_DTO
     {
         private string _MaPhieu;
 

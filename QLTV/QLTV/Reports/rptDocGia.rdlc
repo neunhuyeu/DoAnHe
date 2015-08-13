@@ -1357,7 +1357,7 @@
       <ReportItems>
         <Image Name="Image1">
           <Source>Embedded</Source>
-          <Value>dhcongnghiephanoi</Value>
+          <Value>dhcongnghethongtin</Value>
           <Sizing>FitProportional</Sizing>
           <Top>0.09723in</Top>
           <Left>0.13208in</Left>
@@ -1376,7 +1376,7 @@
             <Paragraph>
               <TextRuns>
                 <TextRun>
-                  <Value>ĐẠI HỌC CÔNG NGHIỆP HÀ NỘI</Value>
+                  <Value>ĐẠI HỌC CÔNG NGHỆ THÔNG TIN</Value>
                   <Style>
                     <FontFamily>Times New Roman</FontFamily>
                     <FontSize>14pt</FontSize>
@@ -1498,7 +1498,7 @@
     <Style />
   </Page>
   <EmbeddedImages>
-    <EmbeddedImage Name="dhcongnghiephanoi">
+    <EmbeddedImage Name="dhcongnghethongtin">
       <MIMEType>image/jpeg</MIMEType>
       <ImageData>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

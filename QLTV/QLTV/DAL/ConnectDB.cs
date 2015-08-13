@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace QLTV.DAL
 {
-    class ConnectDB
+    public class ConnectDB
     {
         private SqlConnection conn;
         private SqlDataAdapter da;

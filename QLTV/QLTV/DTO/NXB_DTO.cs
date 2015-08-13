@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace QLTV.DTO
 {
-    class NXB_DTO
+    public class NXB_DTO
     {
         private string _MaNXB;
 

@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace QLTV.DTO
 {
-    class DocGia_DTO
+    public class DocGia_DTO
     {
         private string _MaDG;
 

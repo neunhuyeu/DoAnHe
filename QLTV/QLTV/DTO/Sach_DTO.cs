@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace QLTV.DTO
 {
-    class Sach_DTO
+    public class Sach_DTO
     {
         private string _MaSach;
 

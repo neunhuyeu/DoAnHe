@@ -699,5 +699,15 @@ namespace QLTV
             }
 
         }
+
+        private void ribbonControl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void siInfo_ItemClick(object sender, ItemClickEventArgs e)
+        {
+
+        }
     }
 }

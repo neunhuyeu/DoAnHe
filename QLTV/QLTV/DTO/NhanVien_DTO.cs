@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace QLTV.DTO
 {
-    class NhanVien_DTO
+    public class NhanVien_DTO
     {
         private string _MaNV;
 

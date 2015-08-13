@@ -266,7 +266,7 @@
     <value>Thông Tin: </value>
   </data>
   <data name="siInfo.Caption" xml:space="preserve">
-    <value>Chào mừng bạn đã sử dụng phần mềm Quản Lý Thư Viện ĐH CN Hà Nội !</value>
+    <value>Chào mừng bạn đã sử dụng phần mềm Quản Lý Thư Viện UIT !</value>
   </data>
   <data name="iBoldFontStyle.Caption" xml:space="preserve">
     <value>Bold</value>
@@ -778,7 +778,7 @@
     <value>CenterScreen</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
-    <value>Phần Mềm Quản Lý Thư Viện ĐH Công Nghiệp HN</value>
+    <value>Phần Mềm Quản Lý Thư Viện ĐH Công Nghệ Thông Tin HCM</value>
   </data>
   <data name="&gt;&gt;nqGroup.Name" xml:space="preserve">
     <value>nqGroup</value>

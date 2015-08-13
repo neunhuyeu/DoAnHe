@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 
 namespace QLTV.DTO
 {
-    class TraSach_DTO
+    public class TraSach_DTO
     {
         private string _MaPhieu;
 

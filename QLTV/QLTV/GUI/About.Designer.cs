@@ -77,7 +77,7 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.Size = new System.Drawing.Size(860, 450);
             this.groupControl1.TabIndex = 0;
-            this.groupControl1.Text = "Phần Mềm Quản Lý Thư Viện ĐH Công Nghiệp HN";
+            this.groupControl1.Text = "Phần Mềm Quản Lý Thư Viện UIT";
             // 
             // flash
             // 
@@ -96,9 +96,9 @@
             this.labelControl7.Appearance.ForeColor = System.Drawing.Color.RoyalBlue;
             this.labelControl7.Location = new System.Drawing.Point(198, 412);
             this.labelControl7.Name = "labelControl7";
-            this.labelControl7.Size = new System.Drawing.Size(115, 19);
+            this.labelControl7.Size = new System.Drawing.Size(127, 19);
             this.labelControl7.TabIndex = 6;
-            this.labelControl7.Text = "Lê Văn Tám Mùi";
+            this.labelControl7.Text = "Nguyễn Mạnh Văn";
             // 
             // labelControl6
             // 
@@ -106,9 +106,9 @@
             this.labelControl6.Appearance.ForeColor = System.Drawing.Color.RoyalBlue;
             this.labelControl6.Location = new System.Drawing.Point(198, 371);
             this.labelControl6.Name = "labelControl6";
-            this.labelControl6.Size = new System.Drawing.Size(118, 19);
+            this.labelControl6.Size = new System.Drawing.Size(126, 19);
             this.labelControl6.TabIndex = 5;
-            this.labelControl6.Text = "Nguyễn Hồng Tài";
+            this.labelControl6.Text = "Nguyễn Trung Việt";
             // 
             // labelControl5
             // 
@@ -116,9 +116,9 @@
             this.labelControl5.Appearance.ForeColor = System.Drawing.Color.RoyalBlue;
             this.labelControl5.Location = new System.Drawing.Point(198, 330);
             this.labelControl5.Name = "labelControl5";
-            this.labelControl5.Size = new System.Drawing.Size(111, 19);
+            this.labelControl5.Size = new System.Drawing.Size(130, 19);
             this.labelControl5.TabIndex = 4;
-            this.labelControl5.Text = "Nguyễn Nhật Tú";
+            this.labelControl5.Text = "Nguyễn Mạnh Linh";
             // 
             // labelControl4
             // 
@@ -126,9 +126,9 @@
             this.labelControl4.Appearance.ForeColor = System.Drawing.Color.RoyalBlue;
             this.labelControl4.Location = new System.Drawing.Point(198, 289);
             this.labelControl4.Name = "labelControl4";
-            this.labelControl4.Size = new System.Drawing.Size(88, 19);
+            this.labelControl4.Size = new System.Drawing.Size(120, 19);
             this.labelControl4.TabIndex = 3;
-            this.labelControl4.Text = "Vũ Văn Tuân";
+            this.labelControl4.Text = "Phùng Hoàng Anh";
             // 
             // labelControl3
             // 
@@ -146,9 +146,9 @@
             this.labelControl2.Appearance.ForeColor = System.Drawing.Color.Tomato;
             this.labelControl2.Location = new System.Drawing.Point(198, 207);
             this.labelControl2.Name = "labelControl2";
-            this.labelControl2.Size = new System.Drawing.Size(121, 19);
+            this.labelControl2.Size = new System.Drawing.Size(148, 19);
             this.labelControl2.TabIndex = 1;
-            this.labelControl2.Text = "Th.sỹ Đỗ Thị Tâm";
+            this.labelControl2.Text = "ThS. Phạm Thi Vương";
             // 
             // labelControl1
             // 
