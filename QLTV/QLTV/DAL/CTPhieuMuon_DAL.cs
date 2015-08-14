@@ -35,7 +35,7 @@ namespace QLTV.DAL
             return true;
         }
         //Thêm CT Phiếu mượn vào CSDL
-        public int ThemCTPM(CTPhieuMuon_DTO ctpm)
+        public bool ThemCTPM(CTPhieuMuon_DTO ctpm)
         {
             int param = 3;
             string[] name = new string[param];
@@ -44,12 +44,20 @@ namespace QLTV.DAL
             name[0] = "maphieu"; value[0] = ctpm.MaPhieu;
             name[1] = "masach"; value[1] = ctpm.MaSach;
             name[2] = "hantra"; value[2] = ctpm.HanTra;
-
-            return connect.Update("sp_ThemCTPM", name, value, param);
+            if (KiemTraTruocKhiLuu(ctpm))
+            {
+                if (connect.Update("sp_ThemCTPM", name, value, param)>0)
+                {
+                    MessageBox.Show("Thêm Chi tiết Phiếu mượn thành công", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+                }
+                return false;
+            }
+            return false;
            
         }
 
-        public int SuaCTPM(CTPhieuMuon_DTO ctpm)
+        public bool SuaCTPM(CTPhieuMuon_DTO ctpm)
         {
             int param = 3;
             string[] name = new string[param];
@@ -61,19 +69,30 @@ namespace QLTV.DAL
             
             if (KiemTraTruocKhiLuu(ctpm))
             {
-                return connect.Update("sp_SuaCTPM", name, value, param);
+                if (connect.Update("sp_SuaCTPM", name, value, param)>0)
+                {
+                    MessageBox.Show("Sửa thông tin Chi tiết Phiếu mượn thành công !", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return true;
+                }
+                return false;
             }
-            return 0;
+            return false;
         }
         //Xóa CT Phiếu mượn trong CSDL
-        public int XoaCTPM(string MaPhieu)
+        public bool XoaCTPM(string MaPhieu)
         {
             int param = 1;
             string[] name = new string[param];
             object[] value = new object[param];
 
             name[0] = "maphieu"; value[0] = MaPhieu;
-            return connect.Update("sp_XoaCTPM", name, value, param);
+            
+            if (connect.Update("sp_XoaCTPM", name, value, param)>0)
+            {
+                MessageBox.Show("Xóa thông tin Chi tiết Phiếu mượn thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return true;
+            }
+            return false;
             
         }
     }

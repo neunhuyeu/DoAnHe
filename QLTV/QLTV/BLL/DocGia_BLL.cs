@@ -39,19 +39,19 @@ namespace QLTV.BLL
         }
 
         //Thêm Độc Giả vào CSDL
-        public int ThemDG(DocGia_DTO dg)
+        public bool ThemDG(DocGia_DTO dg)
         {
             return docgia_dal.ThemDG(dg);
         }
 
         //Sửa Độc Giả vào CSDL
-        public int SuaDG(DocGia_DTO dg)
+        public bool SuaDG(DocGia_DTO dg)
         {
             return docgia_dal.SuaDG(dg);
         }
 
         //Xóa Độc Giả trong CSDL
-        public int XoaDG(string MaDG)
+        public bool XoaDG(string MaDG)
         {
             return docgia_dal.XoaDG(MaDG);
         }
