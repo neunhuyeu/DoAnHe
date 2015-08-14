@@ -39,7 +39,7 @@ namespace QLTV.BLL
         }
 
         //Thêm Độc Giả vào CSDL
-        public bool ThemDG(DocGia_DTO dg)
+        public int ThemDG(DocGia_DTO dg)
         {
             return docgia_dal.ThemDG(dg);
         }

@@ -10,25 +10,23 @@ namespace QLTV.DAL
 {
     public class DocGia_DAL
     {
-        ConnectDB connData = new ConnectDB();
+        ConnectDB connect = new ConnectDB();
         //Hàm lấy tất cả danh sách Độc giả để hiển thị
         public DataTable LayDanhSachDocGia()
         {
-            string sql = "SELECT MaDG, HoTenDG, EmailDG, (CASE GioiTinhDG WHEN 'true' THEN N'Nam' ELSE N'Nữ' END) AS GioiTinhDG, NgaySinhDG, DiaChiDG, DienThoaiDG, NgayLamThe, NgayHetHan, (CASE HoatDong WHEN 'true' THEN N'Đang Hoạt động' ELSE N'Đã Hết hạn' END) AS HoatDong FROM DOCGIA";
-            return connData.getdata(sql);
+            return connect.LoadData("sp_LayDanhSachDocGia");
         }
         //Lấy Danh sách Độc giả load sang Reports Độc giả
         public DataTable Laydsdocgia()
         {
-            string sql = "SELECT MaDG, HoTenDG, EmailDG, GioiTinhDG, NgaySinhDG, DiaChiDG, DienThoaiDG, NgayLamThe, NgayHetHan, HoatDong FROM DOCGIA ";
-            return connData.getdata(sql);
+            return connect.LoadData("sp_Laydsdocgia");
         }
         // Lấy danh sách DG cho load sang ComboBox PM
         public DataTable LayDSDG()
         {
-            string sql = "SELECT MaDG, HoTenDG FROM DOCGIA";
-            return connData.getdata(sql);
+            return connect.LoadData("sp_LayDSDG");
         }
+        
         //Kiểm tra trước khi lưu
         public bool KiemTraTruocKhiLuu(DocGia_DTO dg)
         {
@@ -55,22 +53,30 @@ namespace QLTV.DAL
             return true;
         }
         //Thêm Độc Giả vào CSDL
-        public bool ThemDG(DocGia_DTO dg)
+        public int ThemDG(DocGia_DTO dg)
         {
+            int param = 10;
+            string[] name = new string[param];
+            object[] value = new object[param];
+            
+            name[0] = "MaDG"; value[0] = dg.MaDG;
+            name[1] = "HoTenDG"; value[1] = dg.HoTenDG;
+            name[2] = "EmailDG"; value[2] = dg.EmailDG;
+            name[3] = "GioiTinhDG"; value[3] = dg.GioiTinhDG;
+            name[4] = "NgaySinhDG"; value[4] = dg.NgaySinhDG;
+            name[5] = "DiaChiDG"; value[5] = dg.DiaChiDG;
+            name[6] = "DienThoaiDG"; value[6] = dg.DienThoaiDG;
+            name[7] = "NgayLamThe"; value[7] = dg.NgayLamThe;
+            name[8] = "NgayHetHan"; value[8] = dg.NgayHetHan;
+            name[9] = "HoatDong"; value[9] = dg.HoatDong;
             if (KiemTraTruocKhiLuu(dg))
             {
-                string sql = string.Format("INSERT INTO DOCGIA (MaDG, HoTenDG, EmailDG, GioiTinhDG, NgaySinhDG, DiaChiDG, DienThoaiDG, NgayLamThe, NgayHetHan, HoatDong)"
-                    + " VALUES ('{0}', N'{1}', N'{2}', '{3}',N'{4}', N'{5}', N'{6}', N'{7}', N'{8}', '{9}')", dg.MaDG, dg.HoTenDG, dg.EmailDG, dg.GioiTinhDG, dg.NgaySinhDG, dg.DiaChiDG, dg.DienThoaiDG, dg.NgayLamThe, dg.NgayHetHan, dg.HoatDong);
-                if (connData.ThucThiSQL(sql))
-                {
-                    MessageBox.Show("Thêm Độc Giả thành công", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return true;
-                }
+                return connect.Update("sp_ThemDG", name, value, param);
             }
-            return false;
+            return 0;
         }
         //Sửa Độc Giả vào CSDL
-        public bool SuaDG(DocGia_DTO dg)
+        public int SuaDG(DocGia_DTO dg)
         {
             if (KiemTraTruocKhiLuu(dg))
             {
@@ -85,7 +91,7 @@ namespace QLTV.DAL
             return false;
         }
         //Xóa Độc Giả trong CSDL
-        public bool XoaDG(string MaDG)
+        public int XoaDG(string MaDG)
         {
             string sql = "DELETE FROM DOCGIA WHERE MaDG='" + MaDG + "'";
             if (connData.ThucThiSQL(sql))
@@ -98,7 +104,7 @@ namespace QLTV.DAL
         //Lấy Mã dg kế tiếp
         public string NextID()
         {
-            return Utilities.NextID(connData.GetLastID("DOCGIA", "MaDG"), "DG");
+            return Utilities.NextID(connect.GetLastID("DOCGIA", "MaDG"), "DG");
         }
 
         //Tim kiem sach theo Tieu Chi

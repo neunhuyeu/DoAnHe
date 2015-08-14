@@ -28,19 +28,19 @@ namespace QLTV.BLL
         }
 
         //Thêm CT Phiếu mượn vào CSDL
-        public bool ThemCTPM(CTPhieuMuon_DTO ctpm)
+        public int ThemCTPM(CTPhieuMuon_DTO ctpm)
         {
             return ctpm_dal.ThemCTPM(ctpm);
         }
 
         //Sửa CT Phiếu mượn vào CSDL
-        public bool SuaCTPM(CTPhieuMuon_DTO ctpm)
+        public int SuaCTPM(CTPhieuMuon_DTO ctpm)
         {
             return ctpm_dal.SuaCTPM(ctpm);
         }
 
         //Xóa CT Phiếu mượn trong CSDL
-        public bool XoaCTPM(string MaPhieu)
+        public int XoaCTPM(string MaPhieu)
         {
             return ctpm_dal.XoaCTPM(MaPhieu);
         }
