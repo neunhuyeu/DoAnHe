@@ -10,39 +10,34 @@ namespace QLTV.DAL
 {
     public class PhieuMuon_DAL
     {
-        ConnectDB connData = new ConnectDB();
+        ConnectDB connect = new ConnectDB();
         //Hàm lấy tất cả danh sách Phiếu mượn để hiển thị
         public DataTable LayDanhSachPM()
         {
-            string sql = " SELECT MaPhieu, MaDG, NgayMuon, MaNV FROM PHIEUMUON";
-            return connData.getdata(sql);
+            return connect.LoadData("sp_LayDanhSachPM");
         }
         // Lấy danh sách PM cho load sang ComboBox 
         public DataTable LayDSPM()
         {
-            string sql = "SELECT MaPhieu, MaDG, NgayMuon, MaNV FROM PHIEUMUON";
-            return connData.getdata(sql);
+            return connect.LoadData("sp_LayDSPM");
         }
 
         //Lấy danh sách số lượt mượn
         public DataTable LayDSLuotMuon()
         {
-            string sql = "SELECT CT_PHIEUMUON.MaSach, SACH.TenSach, SACH.Gia, SACH.SoLuong, THELOAI.TenTL, TACGIA.HoTenTG, COUNT(CT_PHIEUMUON.MaSach) AS TongLuotMuon FROM CT_PHIEUMUON INNER JOIN PHIEUMUON ON CT_PHIEUMUON.MaPhieu = PHIEUMUON.MaPhieu INNER JOIN SACH ON CT_PHIEUMUON.MaSach = SACH.MaSach INNER JOIN THELOAI ON SACH.MaTL = THELOAI.MaTL INNER JOIN TACGIA ON SACH.MaTG = TACGIA.MaTG WHERE (SACH.MaSach IN (SELECT MaSach FROM CT_PHIEUMUON AS CT_PHIEUMUON_1)) GROUP BY CT_PHIEUMUON.MaSach, SACH.TenSach, SACH.Gia, SACH.SoLuong, THELOAI.TenTL, TACGIA.HoTenTG";
-            return connData.getdata(sql);
+            return connect.LoadData("sp_LayDSLuotMuon");
         }
 
         //Lấy danh sách số lượt mượn Quá hạn
         public DataTable LayDSMuonQuaHan()
         {
-            string sql = "SELECT PHIEUMUON.MaPhieu, CT_PHIEUMUON.MaSach, SACH.TenSach, TACGIA.HoTenTG, DOCGIA.MaDG, DOCGIA.HoTenDG, DOCGIA.DiaChiDG, PHIEUMUON.NgayMuon, CT_PHIEUMUON.HanTra, TRASACH.NgayTra, DATEDIFF(day, TRASACH.NgayTra, CT_PHIEUMUON.HanTra) AS SONGAYQUAHAN FROM PHIEUMUON INNER JOIN  CT_PHIEUMUON ON PHIEUMUON.MaPhieu = CT_PHIEUMUON.MaPhieu INNER JOIN DOCGIA ON PHIEUMUON.MaDG = DOCGIA.MaDG INNER JOIN SACH ON CT_PHIEUMUON.MaSach = SACH.MaSach INNER JOIN TACGIA ON SACH.MaTG = TACGIA.MaTG INNER JOIN TRASACH ON PHIEUMUON.MaPhieu = TRASACH.MaPhieu AND SACH.MaSach = TRASACH.MaSach WHERE (TRASACH.NgayTra - CT_PHIEUMUON.HanTra > 0) OR (GETDATE() - CT_PHIEUMUON.HanTra > 0) AND (TRASACH.NgayTra IS NULL) ORDER BY PHIEUMUON.MaPhieu, CT_PHIEUMUON.MaSach, SACH.TenSach, TACGIA.HoTenTG, DOCGIA.MaDG, DOCGIA.HoTenDG, DOCGIA.DiaChiDG, PHIEUMUON.NgayMuon, CT_PHIEUMUON.HanTra, TRASACH.NgayTra";
-            return connData.getdata(sql);
+            return connect.LoadData("sp_LayDSMuonQuaHan");
         }
 
         //Lấy danh sách sách chưa được mượn
         public DataTable LayDSSachChuaDuocMuon()
         {
-            string sql = "SELECT  SACH.MaSach, SACH.TenSach, TACGIA.HoTenTG, THELOAI.TenTL, NHAXUATBAN.TenNXB, SACH.SoTrang, SACH.Gia, SACH.SoLuong, SACH.NgayNhap FROM SACH INNER JOIN TACGIA ON SACH.MaTG = TACGIA.MaTG INNER JOIN THELOAI ON SACH.MaTL = THELOAI.MaTL INNER JOIN NHAXUATBAN ON SACH.MaNXB = NHAXUATBAN.MaNXB WHERE (SACH.MaSach NOT IN (SELECT MaSach FROM CT_PHIEUMUON))";
-            return connData.getdata(sql);
+            return connect.LoadData("sp_LayDSSachChuaDuocMuon");
         }
 
         //Kiểm tra trước khi lưu
@@ -68,7 +63,7 @@ namespace QLTV.DAL
 
         public bool KiemTra(string maphieu)
         {
-            if (connData.KiemTraTonTai("CT_PHIEUMUON", "MaPhieu", maphieu))
+            if (connect.KiemTraTonTai("CT_PHIEUMUON", "MaPhieu", maphieu))
                 return true;
             return false;
         }
@@ -76,16 +71,23 @@ namespace QLTV.DAL
         //Thêm Phiếu mượn vào CSDL
         public bool ThemPM(PhieuMuon_DTO pm)
         {
+            int param = 4;
+            string[] name = new string[param];
+            object[] value = new object[param];
+
+            name[0] = "MaPhieu"; value[0] = pm.MaPhieu;
+            name[1] = "MaDG"; value[1] = pm.MaDG;
+            name[2] = "NgayMuon"; value[2] = pm.NgayMuon;
+            name[3] = "MaNV"; value[3] = pm.MaNV;
+            
             if (KiemTraTruocKhiLuu(pm))
             {
-                string sql = string.Format("INSERT INTO PHIEUMUON (MaPhieu, MaDG, NgayMuon, MaNV)"
-                    + " VALUES ('{0}', '{1}', '{2}', '{3}')",
-                    pm.MaPhieu, pm.MaDG, pm.NgayMuon, pm.MaNV);
-                if (connData.ThucThiSQL(sql))
+                if (connect.Update("sp_ThemPM", name, value, param) > 0)
                 {
                     MessageBox.Show("Thêm Phiếu mượn thành công", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return true;
                 }
+                return false;
             }
             return false;
         }
@@ -93,11 +95,18 @@ namespace QLTV.DAL
         //Sửa Phiếu mượn vào CSDL
         public bool SuaPM(PhieuMuon_DTO pm)
         {
+            int param = 4;
+            string[] name = new string[param];
+            object[] value = new object[param];
+
+            name[0] = "MaPhieu"; value[0] = pm.MaPhieu;
+            name[1] = "MaDG"; value[1] = pm.MaDG;
+            name[2] = "NgayMuon"; value[2] = pm.NgayMuon;
+            name[3] = "MaNV"; value[3] = pm.MaNV;
+
             if (KiemTraTruocKhiLuu(pm))
             {
-                string sql = string.Format("UPDATE PHIEUMUON SET MaDG='{1}', NgayMuon=N'{2}', MaNV='{3}' WHERE MaPhieu='{0}'",
-                    pm.MaPhieu, pm.MaDG, pm.NgayMuon, pm.MaNV);
-                if (connData.ThucThiSQL(sql))
+                if (connect.Update("sp_SuaPM", name, value, param) > 0)
                 {
                     MessageBox.Show("Sửa thông tin Phiếu mượn thành công !", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return true;
@@ -109,8 +118,13 @@ namespace QLTV.DAL
         //Xóa Phiếu mượn trong CSDL
         public bool XoaPM(string MaPhieu)
         {
-            string sql = "DELETE FROM PHIEUMUON WHERE MaPhieu='" + MaPhieu + "'";
-            if (connData.ThucThiSQL(sql))
+            int param = 1;
+            string[] name = new string[param];
+            object[] value = new object[param];
+
+            name[0] = "MaPhieu"; value[0] = MaPhieu;
+
+            if (connect.Update("sp_XoaPM", name, value, param) > 0)
             {
                 MessageBox.Show("Xóa thông tin Phiếu mượn thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
@@ -121,7 +135,7 @@ namespace QLTV.DAL
         //Lấy Mã dg kế tiếp
         public string NextID()
         {
-            return Utilities.NextID(connData.GetLastID("PHIEUMUON", "MaPhieu"), "PM");
+            return Utilities.NextID(connect.GetLastID("PHIEUMUON", "MaPhieu"), "PM");
         }
     }
 }

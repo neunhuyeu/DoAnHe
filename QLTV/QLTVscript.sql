@@ -269,5 +269,178 @@ create proc sp_XoaNXB
 )
 as
 	begin
-		DELETE FROM NHAXUATBAN WHERE MaNXB='" + MaNXB + "'"
+		DELETE FROM NHAXUATBAN WHERE MaNXB=@MaNXB
+	end
+
+create proc sp_LayDanhSachPM
+as
+	begin
+		SELECT MaPhieu, MaDG, NgayMuon, MaNV FROM PHIEUMUON
+	end
+
+create proc sp_LayDSPM
+as
+	begin
+		SELECT MaPhieu, MaDG, NgayMuon, MaNV FROM PHIEUMUON
+	end
+
+create proc sp_LayDSLuotMuon
+as
+	begin
+		SELECT CT_PHIEUMUON.MaSach, SACH.TenSach, SACH.Gia, SACH.SoLuong, THELOAI.TenTL, TACGIA.HoTenTG, 
+		COUNT(CT_PHIEUMUON.MaSach) AS TongLuotMuon 
+		FROM CT_PHIEUMUON INNER JOIN PHIEUMUON ON CT_PHIEUMUON.MaPhieu = PHIEUMUON.MaPhieu 
+		INNER JOIN SACH ON CT_PHIEUMUON.MaSach = SACH.MaSach INNER JOIN THELOAI ON SACH.MaTL = THELOAI.MaTL 
+		INNER JOIN TACGIA ON SACH.MaTG = TACGIA.MaTG 
+		WHERE (SACH.MaSach IN (SELECT MaSach FROM CT_PHIEUMUON AS CT_PHIEUMUON_1)) 
+		GROUP BY CT_PHIEUMUON.MaSach, SACH.TenSach, SACH.Gia, SACH.SoLuong, THELOAI.TenTL, TACGIA.HoTenTG
+	end
+
+create proc sp_LayDSMuonQuaHan
+as
+	begin
+		SELECT PHIEUMUON.MaPhieu, CT_PHIEUMUON.MaSach, SACH.TenSach, TACGIA.HoTenTG, 
+		DOCGIA.MaDG, DOCGIA.HoTenDG, DOCGIA.DiaChiDG, PHIEUMUON.NgayMuon, CT_PHIEUMUON.HanTra, TRASACH.NgayTra, 
+		DATEDIFF(day, TRASACH.NgayTra, CT_PHIEUMUON.HanTra) AS SONGAYQUAHAN FROM PHIEUMUON 
+		INNER JOIN  CT_PHIEUMUON ON PHIEUMUON.MaPhieu = CT_PHIEUMUON.MaPhieu 
+		INNER JOIN DOCGIA ON PHIEUMUON.MaDG = DOCGIA.MaDG 
+		INNER JOIN SACH ON CT_PHIEUMUON.MaSach = SACH.MaSach 
+		INNER JOIN TACGIA ON SACH.MaTG = TACGIA.MaTG 
+		INNER JOIN TRASACH ON PHIEUMUON.MaPhieu = TRASACH.MaPhieu AND SACH.MaSach = TRASACH.MaSach 
+		WHERE (TRASACH.NgayTra - CT_PHIEUMUON.HanTra > 0) OR (GETDATE() - CT_PHIEUMUON.HanTra > 0) AND (TRASACH.NgayTra IS NULL) 
+		ORDER BY PHIEUMUON.MaPhieu, CT_PHIEUMUON.MaSach, SACH.TenSach, TACGIA.HoTenTG, DOCGIA.MaDG, 
+		DOCGIA.HoTenDG, DOCGIA.DiaChiDG, PHIEUMUON.NgayMuon, CT_PHIEUMUON.HanTra, TRASACH.NgayTra
+	end
+
+create proc sp_LayDSSachChuaDuocMuon
+as
+	begin
+		SELECT  SACH.MaSach, SACH.TenSach, TACGIA.HoTenTG, THELOAI.TenTL, NHAXUATBAN.TenNXB, 
+		SACH.SoTrang, SACH.Gia, SACH.SoLuong, SACH.NgayNhap FROM SACH 
+		INNER JOIN TACGIA ON SACH.MaTG = TACGIA.MaTG 
+		INNER JOIN THELOAI ON SACH.MaTL = THELOAI.MaTL 
+		INNER JOIN NHAXUATBAN ON SACH.MaNXB = NHAXUATBAN.MaNXB 
+		WHERE (SACH.MaSach NOT IN (SELECT MaSach FROM CT_PHIEUMUON))
+	end
+
+
+create proc sp_ThemPM
+(
+	@MaPhieu char(6), 
+	@MaDG char(6), 
+	@NgayMuon datetime, 
+	@MaNV char(6)
+)
+as
+	begin
+		INSERT INTO PHIEUMUON (MaPhieu, MaDG, NgayMuon, MaNV)
+		VALUES (@MaPhieu, @MaDG, @NgayMuon, @MaNV)
+	end
+
+create proc sp_SuaPM
+(
+	@MaPhieu char(6), 
+	@MaDG char(6), 
+	@NgayMuon datetime, 
+	@MaNV char(6)
+)
+as
+	begin
+		UPDATE PHIEUMUON SET MaDG=@MaDG, NgayMuon=@NgayMuon, MaNV=@MaNV WHERE MaPhieu=@MaPhieu		
+	end
+
+create proc sp_XoaPM
+(
+	@MaPhieu char(6)
+)
+as
+	begin
+		DELETE FROM PHIEUMUON WHERE MaPhieu=@MaPhieu
+	end
+
+create proc sp_LayDanhSachSach
+as
+	begin
+		SELECT MaSach, TenSach, NoiDungTT, SoTrang, Gia, SoLuong, NgayNhap, MaNXB, MaTG, MaTL, 
+		(CASE TinhTrang WHEN 'true' THEN N'Sách Mới' ELSE N'Sách Cũ' END) AS TinhTrang FROM SACH
+	end
+
+create proc sp_LayDSSReport
+as
+	begin
+		SELECT MaSach, TenSach, SoTrang, Gia, SoLuong, NgayNhap, TinhTrang FROM SACH
+	end
+
+
+create proc sp_LayDSSach
+as
+	begin
+		SELECT MaSach, TenSach FROM SACH
+	end
+
+create proc sp_LayDSSachTheoPM
+(
+	@MaPhieu char(6)
+)
+as
+	begin
+		SELECT MaPhieu, MaSach FROM CT_PHIEUMUON WHERE MaPhieu=@MaPhieu
+	end
+
+create proc sp_ThemSach
+(
+	@MaSach char(8), 
+	@TenSach nvarchar(100), 
+	@NoiDungTT nvarchar(300), 
+	@SoTrang int, 
+	@Gia bigint, 
+	@SoLuong int , 
+	@NgayNhap datetime, 
+	@MaNXB char(6), 
+	@MaTG char(6), 
+	@MaTL char(6), 
+	@TinhTrang bit
+)
+as
+	begin
+		INSERT INTO SACH (MaSach, TenSach, NoiDungTT, SoTrang, Gia, SoLuong, NgayNhap, MaNXB, MaTG, MaTL, TinhTrang)
+		VALUES (@MaSach, @TenSach, @NoiDungTT, @SoTrang, @Gia, @SoLuong, @NgayNhap, @MaNXB, @MaTG, @MaTL, @TinhTrang)
+	end
+
+create proc sp_SuaSach
+(
+	@MaSach char(8), 
+	@TenSach nvarchar(100), 
+	@NoiDungTT nvarchar(300), 
+	@SoTrang int, 
+	@Gia bigint, 
+	@SoLuong int , 
+	@NgayNhap datetime, 
+	@MaNXB char(6), 
+	@MaTG char(6), 
+	@MaTL char(6), 
+	@TinhTrang bit
+)
+as
+	begin
+		UPDATE SACH SET TenSach=@TenSach, NoiDungTT=@NoiDungTT, SoTrang=@SoTrang, Gia=@Gia, SoLuong=@SoLuong,
+		NgayNhap=@NgayNhap, MaNXB=@MaNXB, MaTG=@MaTG, MaTL=@MaTL, TinhTrang=@TinhTrang WHERE MaSach=@MaSach
+	end
+
+create proc sp_XoaSach
+(
+	@MaSach char(8)
+)
+as
+	begin
+		DELETE FROM SACH WHERE MaSach=@MaSach
+	end
+
+create proc sp_TimKiemSach
+(
+
+)
+as
+	begin
+
 	end

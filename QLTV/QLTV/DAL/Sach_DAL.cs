@@ -10,34 +10,36 @@ namespace QLTV.DAL
 {
     public class Sach_DAL
     {
-        ConnectDB connData = new ConnectDB();
+        ConnectDB connect = new ConnectDB();
 
         //Hàm lấy tất cả danh sách Sách để hiển thị
         public DataTable LayDanhSachSach()
         {
-            string sql = " SELECT MaSach, TenSach, NoiDungTT, SoTrang, Gia, SoLuong, NgayNhap, MaNXB, MaTG, MaTL, (CASE TinhTrang WHEN 'true' THEN N'Sách Mới' ELSE N'Sách Cũ' END) AS TinhTrang FROM SACH";
-            return connData.getdata(sql);
+            return connect.LoadData("sp_LayDanhSachSach");
         }
 
         //Hàm lấy tất cả danh sách Sách để hiển thị cho Reports
         public DataTable LayDSSReport()
         {
-            string sql = " SELECT MaSach, TenSach, SoTrang, Gia, SoLuong, NgayNhap, TinhTrang FROM SACH";
-            return connData.getdata(sql);
+            return connect.LoadData("sp_LayDSSReport");
         }
 
         // Lấy danh sách Sách load lên Combobox
         public DataTable LayDSSach()
         {
-            string sql = "SELECT MaSach, TenSach FROM SACH";
-            return connData.getdata(sql);
+            return connect.LoadData("sp_LayDSSach");
         }
 
         // Lấy danh sách Sách theo PM
         public DataTable LayDSSachTheoPM(string MaPhieu)
         {
-            string sql = "SELECT MaPhieu, MaSach FROM CT_PHIEUMUON WHERE MaPhieu='" + MaPhieu + "'";
-            return connData.getdata(sql);
+            int param = 1;
+            string[] name = new string[param];
+            object[] value = new object[param];
+
+            name[0] = "MaPhieu"; value[0] = MaPhieu;
+
+            return connect.LoadData("sp_LayDSSachTheoPM", name, value, param);
         }
 
         //Kiểm tra trước khi lưu
@@ -79,16 +81,30 @@ namespace QLTV.DAL
         //Thêm Sách vào CSDL
         public bool ThemSach(Sach_DTO s)
         {
+            int param = 11;
+            string[] name = new string[param];
+            object[] value = new object[param];
+
+            name[0] = "MaSach"; value[0] = s.MaSach;
+            name[1] = "TenSach"; value[1] = s.TenSach;
+            name[2] = "NoiDungTT"; value[2] = s.NoiDungTT;
+            name[3] = "SoTrang"; value[3] = s.SoTrang;
+            name[4] = "Gia"; value[4] = s.Gia;
+            name[5] = "SoLuong"; value[5] = s.SoLuong;
+            name[6] = "NgayNhap"; value[6] = s.NgayNhap;
+            name[7] = "MaNXB"; value[7] = s.MaNXB;
+            name[8] = "MaTG"; value[8] = s.MaTG;
+            name[9] = "MaTL"; value[9] = s.MaTL;
+            name[10] = "TinhTrang"; value[10] = s.TinhTrang;
+
             if (KiemTraTruocKhiLuu(s))
             {
-                string sql = string.Format("INSERT INTO SACH (MaSach, TenSach, NoiDungTT, SoTrang, Gia, SoLuong, NgayNhap, MaNXB, MaTG, MaTL, TinhTrang)"
-                    + " VALUES ('{0}', N'{1}', N'{2}', '{3}','{4}', '{5}', '{6}', '{7}', '{8}','{9}', {10})",
-                    s.MaSach, s.TenSach, s.NoiDungTT, s.SoTrang, s.Gia, s.SoLuong, s.NgayNhap, s.MaNXB, s.MaTG, s.MaTL, s.TinhTrang);
-                if (connData.ThucThiSQL(sql))
+                if (connect.Update("sp_ThemSach", name, value, param) > 0)
                 {
                     MessageBox.Show("Thêm Sách thành công", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return true;
                 }
+                return false;
             }
             return false;
         }
@@ -96,15 +112,29 @@ namespace QLTV.DAL
         //Sửa Sách vào CSDL
         public bool SuaSach(Sach_DTO s)
         {
+            int param = 11;
+            string[] name = new string[param];
+            object[] value = new object[param];
+
+            name[0] = "MaSach"; value[0] = s.MaSach;
+            name[1] = "TenSach"; value[1] = s.TenSach;
+            name[2] = "NoiDungTT"; value[2] = s.NoiDungTT;
+            name[3] = "SoTrang"; value[3] = s.SoTrang;
+            name[4] = "Gia"; value[4] = s.Gia;
+            name[5] = "SoLuong"; value[5] = s.SoLuong;
+            name[6] = "NgayNhap"; value[6] = s.NgayNhap;
+            name[7] = "MaNXB"; value[7] = s.MaNXB;
+            name[8] = "MaTG"; value[8] = s.MaTG;
+            name[9] = "MaTL"; value[9] = s.MaTL;
+            name[10] = "TinhTrang"; value[10] = s.TinhTrang;
             if (KiemTraTruocKhiLuu(s))
             {
-                string sql = string.Format("UPDATE SACH SET TenSach=N'{1}', NoiDungTT=N'{2}', SoTrang='{3}', Gia='{4}', SoLuong='{5}', NgayNhap='{6}', MaNXB='{7}', MaTG='{8}', MaTL='{9}', TinhTrang={10} WHERE MaSach='{0}'",
-                    s.MaSach, s.TenSach, s.NoiDungTT, s.SoTrang, s.Gia, s.SoLuong, s.NgayNhap, s.MaNXB, s.MaTG, s.MaTL, s.TinhTrang);
-                if (connData.ThucThiSQL(sql))
+                if (connect.Update("sp_ThemSach", name, value, param) > 0)
                 {
                     MessageBox.Show("Sửa thông tin Sách thành công !", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return true;
                 }
+                return false;
             }
             return false;
         }
@@ -112,8 +142,13 @@ namespace QLTV.DAL
         //Xóa Sách trong CSDL
         public bool XoaSach(string MaSach)
         {
-            string sql = "DELETE FROM SACH WHERE MaSach='" + MaSach + "'";
-            if (connData.ThucThiSQL(sql))
+            int param = 1;
+            string[] name = new string[param];
+            object[] value = new object[param];
+
+            name[0] = "MaSach"; value[0] = MaSach;
+
+            if (connect.Update("sp_XoaSach", name, value, param) > 0)
             {
                 MessageBox.Show("Xóa thông tin Sách thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;
@@ -124,14 +159,19 @@ namespace QLTV.DAL
         //Lấy Mã dg kế tiếp
         public string NextID()
         {
-            return Utilities.NextID(connData.GetLastID("SACH", "MaSach"), "MS");
+            return Utilities.NextID(connect.GetLastID("SACH", "MaSach"), "MS");
         }
 
         //Tim kiem sach theo Tieu Chi
         public DataTable TimKiemSach(string DieuKien, string TieuChi)
         {
-            string sql = " SELECT MaSach, TenSach, NoiDungTT, SoTrang, Gia, SoLuong, NgayNhap, MaNXB, MaTG, MaTL, (CASE TinhTrang WHEN 'true' THEN N'Sách Mới' ELSE N'Sách Cũ' END) AS TinhTrang FROM SACH WHERE " + DieuKien + " LIKE N'%" + TieuChi + "%'";
-            return connData.getdata(sql);
+            int param = 2;
+            string[] name = new string[param];
+            object[] value = new object[param];
+
+            name[0] = "DieuKien"; value[0] = DieuKien;
+            name[1] = "TieuChi"; value[1] = TieuChi;
+            return connect.LoadData("sp_TimKiemSach", name, value, param);
         }
     }
 }
