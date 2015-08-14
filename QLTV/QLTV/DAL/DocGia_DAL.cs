@@ -78,17 +78,25 @@ namespace QLTV.DAL
         //Sửa Độc Giả vào CSDL
         public int SuaDG(DocGia_DTO dg)
         {
+            int param = 10;
+            string[] name = new string[param];
+            object[] value = new object[param];
+
+            name[0] = "MaDG"; value[0] = dg.MaDG;
+            name[1] = "HoTenDG"; value[1] = dg.HoTenDG;
+            name[2] = "EmailDG"; value[2] = dg.EmailDG;
+            name[3] = "GioiTinhDG"; value[3] = dg.GioiTinhDG;
+            name[4] = "NgaySinhDG"; value[4] = dg.NgaySinhDG;
+            name[5] = "DiaChiDG"; value[5] = dg.DiaChiDG;
+            name[6] = "DienThoaiDG"; value[6] = dg.DienThoaiDG;
+            name[7] = "NgayLamThe"; value[7] = dg.NgayLamThe;
+            name[8] = "NgayHetHan"; value[8] = dg.NgayHetHan;
+            name[9] = "HoatDong"; value[9] = dg.HoatDong;
             if (KiemTraTruocKhiLuu(dg))
             {
-                string sql = string.Format("UPDATE DOCGIA SET HoTenDG=N'{1}', EmailDG=N'{2}', GioiTinhDG={3}, NgaySinhDG=N'{4}', DiaChiDG=N'{5}', DienThoaiDG=N'{6}', NgayLamThe=N'{7}', NgayHetHan=N'{8}', HoatDong={9} WHERE MaDG=N'{0}'",
-                    dg.MaDG, dg.HoTenDG, dg.EmailDG, dg.GioiTinhDG, dg.NgaySinhDG, dg.DiaChiDG, dg.DienThoaiDG, dg.NgayLamThe, dg.NgayHetHan, dg.HoatDong);
-                if (connData.ThucThiSQL(sql))
-                {
-                    MessageBox.Show("Sửa Độc Giả thành công !", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    return true;
-                }
+                return connect.Update("sp_SuaDG", name, value, param);
             }
-            return false;
+            return 0;
         }
         //Xóa Độc Giả trong CSDL
         public int XoaDG(string MaDG)

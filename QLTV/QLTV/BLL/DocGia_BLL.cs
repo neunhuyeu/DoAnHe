@@ -45,13 +45,13 @@ namespace QLTV.BLL
         }
 
         //Sửa Độc Giả vào CSDL
-        public bool SuaDG(DocGia_DTO dg)
+        public int SuaDG(DocGia_DTO dg)
         {
             return docgia_dal.SuaDG(dg);
         }
 
         //Xóa Độc Giả trong CSDL
-        public bool XoaDG(string MaDG)
+        public int XoaDG(string MaDG)
         {
             return docgia_dal.XoaDG(MaDG);
         }
