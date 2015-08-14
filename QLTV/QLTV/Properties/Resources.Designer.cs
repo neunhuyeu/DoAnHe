@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace QLTV.Properties {
+namespace QLTV.Properties { 
     using System;
     
     

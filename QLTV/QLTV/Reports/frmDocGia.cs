@@ -6,7 +6,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using QLTV.BLL;
+using QLTV.BLL; 
 using QLTV.DTO;
 using Microsoft.Reporting.WinForms;
 

@@ -32,7 +32,7 @@ namespace QLTV.DAL
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Không thể kết nối tới Cơ Sở Dữ Liệu !", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Không thể kết nối tới Cơ Sở Dữ Liệu !" + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 

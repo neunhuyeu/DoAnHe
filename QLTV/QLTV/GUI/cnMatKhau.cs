@@ -43,13 +43,13 @@ namespace QLTV.GUI
             {
                 lblThongBao.Text = "Bạn chưa điền đầy đủ các thông tin !";
                 return false;
-                goto Cont;
+                //goto Cont;
             }
             if (newPass != reNewPass)
             {
                 lblThongBao.Text = "Mật khẩu mới không khớp nhau !";
                 return false;
-                goto Cont;
+                //goto Cont;
             }
 
             //Kiểm tra mật khẩu cũ có khớp không
@@ -57,7 +57,7 @@ namespace QLTV.GUI
             {
                 lblThongBao.Text = "Mật khẩu cũ không đúng !";
                 return false;
-                goto Cont;
+                //goto Cont;
             }
             return true;
         }

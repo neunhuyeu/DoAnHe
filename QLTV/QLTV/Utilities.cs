@@ -8,7 +8,7 @@ using QLTV.DTO;
 namespace QLTV
 {
     class Utilities
-    {
+    { 
         //Lấy mã kế tiếp
         public static string NextID(string lastID, string prefixID)
         {

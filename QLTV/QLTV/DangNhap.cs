@@ -7,7 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using QLTV.DTO;
-using QLTV.BLL;
+using QLTV.BLL; 
 
 namespace QLTV
 {
