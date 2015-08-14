@@ -438,9 +438,56 @@ as
 
 create proc sp_TimKiemSach
 (
-
+	@DieuKien nvarchar(50),
+	@TieuChi nvarchar(50)
 )
 as
 	begin
+		SELECT MaSach, TenSach, NoiDungTT, SoTrang, Gia, SoLuong, NgayNhap, MaNXB, MaTG, MaTL, 
+		(CASE TinhTrang WHEN 'true' THEN N'Sách Mới' ELSE N'Sách Cũ' END) AS TinhTrang FROM SACH 
+		WHERE @DieuKien LIKE @TieuChi
+	end
 
+
+create proc sp_LayDanhSachTacGia
+as
+	begin
+		SELECT * FROM TACGIA
+	end
+
+create proc sp_LayDSTG
+as
+	begin 
+		SELECT MaTG, HoTenTG FROM TACGIA
+	end
+
+create proc sp_ThemTG
+(
+	@MaTG char(6), @HoTenTG nvarchar(30), @DiaChiTG nvarchar(100), @DienThoaiTG char(11)
+)
+as
+	begin
+		INSERT INTO TACGIA (MaTG, HoTenTG, DiaChiTG, DienThoaiTG)
+		VALUES (@MaTG, @HoTenTG, @DiaChiTG, @DienThoaiTG)
+	end
+
+create proc sp_SuaTG
+(
+	@MaTG char(6), 
+	@HoTenTG nvarchar(30), 
+	@DiaChiTG nvarchar(100), 
+	@DienThoaiTG char(11)
+)
+as
+	begin
+		UPDATE TACGIA SET HoTenTG=@HoTenTG, DiaChiTG=@DiaChiTG, DienThoaiTG=@DienThoaiTG WHERE MaTG=@MaTG
+	end
+
+create proc sp_XoaTG
+(
+	@MaTG char(6)
+)
+as
+	begin
+		DELETE FROM TACGIA WHERE MaTG=@MaTG
 	end
