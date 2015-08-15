@@ -10,13 +10,12 @@ namespace QLTV.DAL
 {
     public class TraSach_DAL
     {
-        ConnectDB connData = new ConnectDB();
+        ConnectDB connect = new ConnectDB();
 
         //Hàm lấy tất cả danh sách trả sách
         public DataTable LayDanhSachTRASACH()
         {
-            string sql = "SELECT MaPhieu, MaSach, MaNV, NgayTra, PhatHuHong, PhatQuaHan FROM TRASACH";
-            return connData.getdata(sql);
+            return connect.LoadData("sp_LayDanhSachTRASACH");
         }
 
         //Kiểm tra trước khi lưu
@@ -43,16 +42,25 @@ namespace QLTV.DAL
         //Thêm Phiếu trả vào CSDL
         public bool ThemPT(TraSach_DTO ts)
         {
+            int param = 6;
+            string[] name = new string[param];
+            object[] value = new object[param];
+
+            name[0] = "MaPhieu"; value[0] = ts.MaPhieu;
+            name[1] = "MaSach"; value[1] = ts.MaSach;
+            name[2] = "MaNV"; value[2] = ts.MaNV;
+            name[3] = "NgayTra"; value[3] = ts.NgayTra;
+            name[4] = "PhatHuHong"; value[4] = ts.PhatHuHong;
+            name[5] = "PhatQuaHan"; value[5] = ts.PhatQuaHan;
+
             if (KiemTraTruocKhiLuu(ts))
             {
-                string sql = string.Format("INSERT INTO TRASACH (MaPhieu, MaSach, MaNV, NgayTra, PhatHuHong, PhatQuaHan)"
-                    + " VALUES ('{0}', '{1}', '{2}', '{3}', '{4}', '{5}')",
-                    ts.MaPhieu, ts.MaSach, ts.MaNV, ts.NgayTra, ts.PhatHuHong, ts.PhatQuaHan);
-                if (connData.ThucThiSQL(sql))
+                if (connect.Update("sp_ThemPT", name, value, param) > 0)
                 {
                     MessageBox.Show("Thêm Phiếu Trả thành công", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return true;
                 }
+                return false;
             }
             return false;
         }
@@ -61,14 +69,25 @@ namespace QLTV.DAL
         //Sửa Phiếu Trả vào CSDL
         public bool SuaPT(TraSach_DTO ts)
         {
+            int param = 6;
+            string[] name = new string[param];
+            object[] value = new object[param];
+
+            name[0] = "MaPhieu"; value[0] = ts.MaPhieu;
+            name[1] = "MaSach"; value[1] = ts.MaSach;
+            name[2] = "MaNV"; value[2] = ts.MaNV;
+            name[3] = "NgayTra"; value[3] = ts.NgayTra;
+            name[4] = "PhatHuHong"; value[4] = ts.PhatHuHong;
+            name[5] = "PhatQuaHan"; value[5] = ts.PhatQuaHan;
+
             if (KiemTraTruocKhiLuu(ts))
             {
-                string sql = string.Format("UPDATE TRASACH SET MaSach=N'{1}', MaNV=N'{2}', NgayTra=N'{3}', PhatHuHong=N'{4}', PhatQuaHan=N'{5}' WHERE MaPhieu=N'{0}'", ts.MaPhieu, ts.MaSach, ts.MaNV, ts.NgayTra, ts.PhatHuHong, ts.PhatQuaHan);
-                if (connData.ThucThiSQL(sql))
+                if (connect.Update("sp_SuaPT", name, value, param) > 0)
                 {
                     MessageBox.Show("Sửa Phiếu trả thành công !", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return true;
                 }
+                return false;
             }
             return false;
         }
@@ -76,8 +95,12 @@ namespace QLTV.DAL
         //Xóa Phiếu trả trong CSDL
         public bool XoaPT(string MaSach)
         {
-            string sql = "DELETE FROM TRASACH WHERE MaSach='" + MaSach + "'";
-            if (connData.ThucThiSQL(sql))
+            int param = 6;
+            string[] name = new string[param];
+            object[] value = new object[param];
+            name[0] = "MaSach"; value[0] = MaSach;
+            
+            if (connect.Update("sp_SuaPT", name, value, param) > 0)
             {
                 MessageBox.Show("Xóa Phiếu trả thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 return true;

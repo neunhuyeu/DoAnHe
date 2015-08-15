@@ -491,3 +491,92 @@ as
 	begin
 		DELETE FROM TACGIA WHERE MaTG=@MaTG
 	end
+
+
+create proc sp_LayDanhSachTheLoai
+as
+	begin
+		SELECT MaTL, TenTL, GhiChu FROM THELOAI
+	end
+
+create proc sp_LayDSTL
+as
+	begin
+		SELECT MaTL, TenTL FROM THELOAI
+	end
+
+create proc sp_ThemTL
+(
+	@MaTL char(6), 
+	@TenTL nvarchar(100), 
+	@GhiChu nvarchar(500)
+)
+as
+	begin
+		INSERT INTO THELOAI (MaTL, TenTL, GhiChu)
+		VALUES (@MaTL, @TenTL, @GhiChu)
+	end	
+
+create proc sp_SuaTL
+(
+	@MaTL char(6), 
+	@TenTL nvarchar(100), 
+	@GhiChu nvarchar(500)
+)
+as
+	begin
+		UPDATE THELOAI SET TenTL=@TenTL, GhiChu=@GhiChu WHERE MaTL=@MaTL
+	end
+
+create proc sp_XoaTL
+(
+	@MaTL char(6) 
+)
+as
+	begin
+		DELETE FROM THELOAI WHERE MaTL=@MaTL
+	end
+
+create proc sp_LayDanhSachTRASACH
+as
+	begin
+		SELECT MaPhieu, MaSach, MaNV, NgayTra, PhatHuHong, PhatQuaHan FROM TRASACH
+	end
+
+create proc sp_ThemPT
+(
+	@MaPhieu char(6), 
+	@MaSach char(8), 
+	@MaNV char(6),  
+	@NgayTra datetime, 
+	@PhatHuHong bigint, 
+	@PhatQuaHan bigint
+)
+as
+	begin
+		INSERT INTO TRASACH (MaPhieu, MaSach, MaNV, NgayTra, PhatHuHong, PhatQuaHan)
+		VALUES (@MaPhieu, @MaSach, @MaNV, @NgayTra, @PhatHuHong, @PhatQuaHan)
+	end
+
+create proc sp_SuaPT
+(
+	@MaPhieu char(6), 
+	@MaSach char(8), 
+	@MaNV char(6),  
+	@NgayTra datetime, 
+	@PhatHuHong bigint, 
+	@PhatQuaHan bigint
+)
+as
+	begin
+		UPDATE TRASACH SET MaSach=@MaSach, MaNV=@MaNV, NgayTra=@NgayTra, PhatHuHong=@PhatHuHong, PhatQuaHan=@PhatQuaHan WHERE MaPhieu=@MaPhieu
+	end
+
+create proc sp_XoaPT
+(
+	@MaSach char(8)
+)
+as
+	begin
+		DELETE FROM TRASACH WHERE MaSach=@MaSach
+	end
