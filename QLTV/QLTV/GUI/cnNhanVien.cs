@@ -16,7 +16,7 @@ namespace QLTV.Use_Control
 
         private NhanVien_BLL nvBUS = new NhanVien_BLL();
         private bool add = false, update = false;
-
+         
         private void cleantxt()
         {
             txtHoTenNV.Text = "";

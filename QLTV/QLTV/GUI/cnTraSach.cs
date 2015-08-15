@@ -18,7 +18,7 @@ namespace QLTV.GUI
         private PhieuMuon_BLL pmBUS = new PhieuMuon_BLL();
         private Sach_BLL sBUS = new Sach_BLL();
         private NhanVien_BLL nvBUS = new NhanVien_BLL();
-        private bool add = false, update = false;
+        private bool add = false, update = false; 
 
         //Xóa dữ liệu trên textbox
         public void cleantxt()

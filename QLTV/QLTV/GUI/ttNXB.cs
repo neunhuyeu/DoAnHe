@@ -10,7 +10,7 @@ using QLTV.DTO;
 using QLTV.BLL;
 
 namespace QLTV.Use_Control
-{
+{ 
     public partial class ttNXB : UserControl
     {
         private NXB_BLL nxbBUS = new NXB_BLL();

@@ -16,7 +16,7 @@ namespace QLTV.GUI
         private DocGia_BLL dgBUS = new DocGia_BLL();
 
         public tkDocGia()
-        {
+        { 
             InitializeComponent();
         }
 

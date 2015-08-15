@@ -17,7 +17,7 @@
             {
                 components.Dispose();
             }
-            base.Dispose(disposing);
+            base.Dispose(disposing); 
         }
 
         #region Component Designer generated code

@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using System.Data.SqlClient;
 using QLTV.BLL;
 using QLTV.DTO;
-
+ 
 namespace QLTV.Use_Control
 {
     public partial class cnTheLoai : UserControl

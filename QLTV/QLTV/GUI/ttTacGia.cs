@@ -22,7 +22,7 @@ namespace QLTV.Use_Control
         private void ttTacGia_Load(object sender, EventArgs e)
         {
             //Load DataGrid
-            dgvTacGia.DataSource = tgBUS.LayDanhSachTacGia();
+            dgvTacGia.DataSource = tgBUS.LayDanhSachTacGia(); 
         }
     }
 }

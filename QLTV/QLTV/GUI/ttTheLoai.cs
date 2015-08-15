@@ -19,7 +19,7 @@ namespace QLTV.Use_Control
         public ttTheLoai()
         {
             InitializeComponent();
-        }
+        } 
 
         private void ttTheLoai_Load(object sender, EventArgs e)
         {

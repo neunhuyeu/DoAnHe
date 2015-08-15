@@ -12,7 +12,6 @@ namespace QLTV.Use_Control
     public partial class About : UserControl
     {
         string A, B, C, D, E, F, G;
-
         public About()
         {
             InitializeComponent();

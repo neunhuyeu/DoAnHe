@@ -17,7 +17,7 @@ namespace QLTV.GUI
         private NXB_BLL nxbBUS = new NXB_BLL();
         private TacGia_BLL tgBUS = new TacGia_BLL();
         private TheLoai_BLL tlBUS = new TheLoai_BLL();
-        public tkSach()
+        public tkSach() 
         {
             InitializeComponent();
         }

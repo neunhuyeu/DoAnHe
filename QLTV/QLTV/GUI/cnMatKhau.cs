@@ -31,6 +31,7 @@ namespace QLTV.GUI
             txtOldPass.Focus();
         }
 
+
         //Kiểm tra Mật khẩu
         public bool KiemTra()
         {

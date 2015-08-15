@@ -28,7 +28,7 @@ namespace QLTV.GUI
             {
                 txtGioiTinh.Text = "Nam";
             }
-            else txtGioiTinh.Text = "Nữ";
+            else txtGioiTinh.Text = "Nữ"; 
             dateNgaySinh.Text = Convert.ToString(Utilities.user.NgaySinhNV);
             txtSdt.Text = Utilities.user.DienThoaiNV;
             txtDiaChi.Text = Utilities.user.DiaChiNV;

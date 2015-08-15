@@ -14,9 +14,9 @@ namespace QLTV.Use_Control
 {
     public partial class cnDocGia : UserControl
     {
-
         private DocGia_BLL dgBUS = new DocGia_BLL();
         private bool add = false, update = false;
+
 
         //Xóa dữ liệu trên textbox
         private void cleantxt()

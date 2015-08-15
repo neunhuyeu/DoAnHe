@@ -130,25 +130,26 @@
         CAAMAAAAZgBhAGwAcwBlAAAACAAEAAAAMAAAAAs=
 </value>
   </data>
-  <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>17, 17</value>
-  </metadata>
-  <metadata name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="timer2.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>104, 17</value>
-  </metadata>
-  <metadata name="timer3.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="timer3.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>191, 17</value>
-  </metadata>
-  <metadata name="timer4.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="timer4.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>278, 17</value>
-  </metadata>
-  <metadata name="timer5.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="timer5.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>365, 17</value>
-  </metadata>
-  <metadata name="timer6.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="timer6.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>452, 17</value>
-  </metadata>
-  <metadata name="timer7.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+  </data>
+  <data name="timer7.TrayLocation" type="System.Drawing.Point, System.Drawing">
     <value>539, 17</value>
-  </metadata>
+  </data>
 </root>

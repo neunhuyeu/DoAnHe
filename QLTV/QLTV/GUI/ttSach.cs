@@ -18,7 +18,7 @@ namespace QLTV.Use_Control
         {
             InitializeComponent();
         }
-
+         
         private void ttSach_Load(object sender, EventArgs e)
         {
             //Load DataGrid

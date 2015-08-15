@@ -13,7 +13,7 @@ using QLTV.DTO;
 namespace QLTV.GUI
 {
     public partial class ttSachChuaDuocMuon : UserControl
-    {
+    { 
         private PhieuMuon_BLL pmBUS = new PhieuMuon_BLL();
 
         public ttSachChuaDuocMuon()

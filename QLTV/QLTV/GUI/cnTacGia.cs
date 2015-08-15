@@ -19,7 +19,7 @@ namespace QLTV.Use_Control
 
         //Xóa dữ liệu trên textbox
         public void cleantxt()
-        {
+        { 
             txtTenTG.Text = "";
             txtDiaChi.Text = "";
             txtSdt.Text = "";

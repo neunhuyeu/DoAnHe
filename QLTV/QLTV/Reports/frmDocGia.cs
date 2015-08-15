@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using QLTV.BLL; 
 using QLTV.DTO;
 using Microsoft.Reporting.WinForms;
+using System.IO;
 
 namespace QLTV.Reports
 {
@@ -35,6 +36,12 @@ namespace QLTV.Reports
             param.Add(new ReportParameter("NguoiLap", Nguoilap));
             reportViewerDocGia.LocalReport.SetParameters(param);
             reportViewerDocGia.RefreshReport();
+            Byte[] mybytes = reportViewerDocGia.LocalReport.Render("PDF");
+
+            using (FileStream fs = File.Create(@"D:\ReportDocGia.pdf"))
+            {
+                fs.Write(mybytes, 0, mybytes.Length);
+            }
         }
     }
 }

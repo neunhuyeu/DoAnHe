@@ -25,7 +25,7 @@ namespace QLTV.Use_Control
             txtSdt.Text = "";
             txtWebsite.Text = "";
         }
-
+         
         //Binding dữ liệu lên textbox
         public void binding()
         {

@@ -12,7 +12,7 @@ using QLTV.DTO;
 namespace QLTV.Use_Control
 {
     public partial class cnSach : UserControl
-    {
+    { 
         private Sach_BLL sBUS = new Sach_BLL();
         private NXB_BLL nxbBUS = new NXB_BLL();
         private TacGia_BLL tgBUS = new TacGia_BLL();

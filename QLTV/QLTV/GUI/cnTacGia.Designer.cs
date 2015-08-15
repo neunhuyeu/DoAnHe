@@ -338,7 +338,7 @@
 
         }
 
-        #endregion
+        #endregion 
 
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraEditors.LabelControl labelControl8;

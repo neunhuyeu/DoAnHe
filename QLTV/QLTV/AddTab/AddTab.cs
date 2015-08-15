@@ -36,7 +36,7 @@ namespace AddTab
             }
             catch (Exception ex)
             {
-                MessageBox.Show("lỗi như thế này: " + ex.Message, "Lỗi");
+                //MessageBox.Show("lỗi như thế này: " + ex.Message, "Lỗi");
             }
             // Quăng nó lên TAb Cha 
             XtraTabCha.TabPages.Add(TAbAdd);

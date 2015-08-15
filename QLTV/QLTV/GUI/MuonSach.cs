@@ -14,7 +14,7 @@ namespace QLTV.Use_Control
     public partial class MuonSach : UserControl
     {
         private PhieuMuon_BLL pmBUS = new PhieuMuon_BLL();
-        private DocGia_BLL dgBUS = new DocGia_BLL();
+        private DocGia_BLL dgBUS = new DocGia_BLL(); 
         private NhanVien_BLL nvBUS = new NhanVien_BLL();
         private Sach_BLL sBUS = new Sach_BLL();
         private CTPhieuMuon_BLL ctpmBUS = new CTPhieuMuon_BLL();

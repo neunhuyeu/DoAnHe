@@ -11,7 +11,7 @@
         /// Clean up any resources being used.
         /// </summary>
         /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
-        protected override void Dispose(bool disposing)  
+        protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
             {
@@ -19,6 +19,7 @@
             }
             base.Dispose(disposing);
         }
+
 
         #region Windows Form Designer generated code
 
@@ -48,7 +49,7 @@
             this.labelControl1.Location = new System.Drawing.Point(210, 24);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(101, 24);
-            this.labelControl1.TabIndex = 0;
+            this.labelControl1.TabIndex = 6;
             this.labelControl1.Text = "Đăng Nhập";
             // 
             // labelControl2
@@ -57,7 +58,7 @@
             this.labelControl2.Location = new System.Drawing.Point(135, 64);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(83, 15);
-            this.labelControl2.TabIndex = 1;
+            this.labelControl2.TabIndex = 5;
             this.labelControl2.Text = "Tên Đăng nhập";
             // 
             // labelControl3
@@ -66,7 +67,7 @@
             this.labelControl3.Location = new System.Drawing.Point(135, 103);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(51, 15);
-            this.labelControl3.TabIndex = 2;
+            this.labelControl3.TabIndex = 4;
             this.labelControl3.Text = "Mật khẩu";
             // 
             // txtTenDN
@@ -74,7 +75,7 @@
             this.txtTenDN.Location = new System.Drawing.Point(233, 63);
             this.txtTenDN.Name = "txtTenDN";
             this.txtTenDN.Size = new System.Drawing.Size(187, 20);
-            this.txtTenDN.TabIndex = 3;
+            this.txtTenDN.TabIndex = 0;
             // 
             // btnDangNhap
             // 
@@ -85,8 +86,9 @@
             this.btnDangNhap.Location = new System.Drawing.Point(214, 170);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(94, 28);
-            this.btnDangNhap.TabIndex = 5;
+            this.btnDangNhap.TabIndex = 2;
             this.btnDangNhap.Text = "Đăng nhập";
+
             // 
             // btnDong
             // 
@@ -97,7 +99,7 @@
             this.btnDong.Location = new System.Drawing.Point(326, 170);
             this.btnDong.Name = "btnDong";
             this.btnDong.Size = new System.Drawing.Size(94, 28);
-            this.btnDong.TabIndex = 6;
+            this.btnDong.TabIndex = 3;
             this.btnDong.Text = "Đóng";
             // 
             // pictureEdit1
@@ -111,7 +113,7 @@
             this.pictureEdit1.Properties.Appearance.Options.UseForeColor = true;
             this.pictureEdit1.Properties.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
             this.pictureEdit1.Size = new System.Drawing.Size(128, 128);
-            this.pictureEdit1.TabIndex = 7;
+            this.pictureEdit1.TabIndex = 3;
             // 
             // lblTrangThaiLogin
             // 
@@ -120,7 +122,7 @@
             this.lblTrangThaiLogin.Location = new System.Drawing.Point(135, 137);
             this.lblTrangThaiLogin.Name = "lblTrangThaiLogin";
             this.lblTrangThaiLogin.Size = new System.Drawing.Size(139, 15);
-            this.lblTrangThaiLogin.TabIndex = 8;
+            this.lblTrangThaiLogin.TabIndex = 2;
             this.lblTrangThaiLogin.Text = "Trạng thái chưa đăng nhập !";
             // 
             // txtMatKhau
@@ -128,8 +130,9 @@
             this.txtMatKhau.Location = new System.Drawing.Point(233, 101);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(187, 20);
-            this.txtMatKhau.TabIndex = 9;
+            this.txtMatKhau.TabIndex = 1;
             this.txtMatKhau.UseSystemPasswordChar = true;
+
             // 
             // DangNhap
             // 

@@ -14,7 +14,7 @@ namespace QLTV.Use_Control
     public partial class ttDocGia : UserControl
     {
         private DocGia_BLL dgBUS = new DocGia_BLL();
-        public ttDocGia()
+        public ttDocGia() 
         {
             InitializeComponent();
         }
