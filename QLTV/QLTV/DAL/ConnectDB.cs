@@ -11,7 +11,7 @@ namespace QLTV.DAL
     public class ConnectDB
     {
         //private SqlConnection conn;
-        //private SqlDataAdapter da;
+        private SqlDataAdapter da;
         //private DataTable dt;
 
         #region Varialbles
@@ -136,15 +136,15 @@ namespace QLTV.DAL
         //}
 
         ////Hàm lấy dữ liệu từ Database theo câu lệnh sql truyền vào
-        //public  DataTable getdata(string sql)
-        //{
-        //    // Tạo dataApdapter, thực hiện câu lệnh query
-        //    da = new SqlDataAdapter(sql, conn);
-        //    // Đổ dữ liệu vào DataTable
-        //    dt = new DataTable();
-        //    da.Fill(dt);
-        //    return dt;
-        //}
+        public DataTable getdata(string sql)
+        {
+            // Tạo dataApdapter, thực hiện câu lệnh query
+            da = new SqlDataAdapter(sql, connect);
+            // Đổ dữ liệu vào DataTable
+            DataTable dtTemp = new DataTable();
+            da.Fill(dtTemp);
+            return dtTemp;
+        }
 
         ////Hàm Thêm, Cập nhật, Xóa dữ liệu theo câu lệnh sql đưa vào
         //public bool ThucThiSQL(string sql)
@@ -171,6 +171,7 @@ namespace QLTV.DAL
         ////Hàm kiểm tra sự tồn tại
         public bool KiemTraTonTai(string nameTable, string nameFiled, string value)
         {
+            
             string sql = "SELECT * FROM " + nameTable + " WHERE " + nameFiled + " = '" + value + "'";
             DataTable dtTemp = new DataTable();
             
@@ -188,7 +189,7 @@ namespace QLTV.DAL
             string sql = "SELECT TOP (1) " + nameFiled + " FROM " + nameTable + " ORDER BY " + nameFiled + " DESC";
             DataTable dtTemp = new DataTable();
 
-            dtTemp = LoadData(sql);
+            dtTemp = getdata(sql);
             // thực hiện câu truy vấn trên
             return dtTemp.Rows[0][nameFiled].ToString();
         }
