@@ -124,5 +124,17 @@ namespace QLTV.GUI
         {
             tkSach_Load(sender, e);
         }
+
+        private void txtMaSach_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnTim_Click(sender, e);
+        }
+
+        private void txtTenSach_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnTim_Click(sender, e);
+        }
     }
 }

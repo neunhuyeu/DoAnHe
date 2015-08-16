@@ -151,5 +151,17 @@ namespace QLTV.GUI
                 e.Handled = true;
             }
         }
+
+        private void txtPhatQH_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnLuu_Click(sender, e);
+        }
+
+        private void txtPhatHong_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnLuu_Click(sender, e);
+        }
     }
 }

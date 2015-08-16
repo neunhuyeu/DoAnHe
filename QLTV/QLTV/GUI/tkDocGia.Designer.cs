@@ -195,6 +195,7 @@
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(271, 20);
             this.txtDiaChi.TabIndex = 52;
+            this.txtDiaChi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDiaChi_KeyDown);
             // 
             // txtTenDG
             // 
@@ -202,6 +203,7 @@
             this.txtTenDG.Name = "txtTenDG";
             this.txtTenDG.Size = new System.Drawing.Size(271, 20);
             this.txtTenDG.TabIndex = 51;
+            this.txtTenDG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTenDG_KeyDown);
             // 
             // txtMaDG
             // 
@@ -209,6 +211,7 @@
             this.txtMaDG.Name = "txtMaDG";
             this.txtMaDG.Size = new System.Drawing.Size(271, 20);
             this.txtMaDG.TabIndex = 50;
+            this.txtMaDG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMaDG_KeyDown);
             // 
             // radDiaChi
             // 

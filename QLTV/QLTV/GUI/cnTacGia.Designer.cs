@@ -156,6 +156,7 @@
             this.txtSdt.Name = "txtSdt";
             this.txtSdt.Size = new System.Drawing.Size(210, 20);
             this.txtSdt.TabIndex = 15;
+            this.txtSdt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSdt_KeyDown);
             // 
             // txtDiaChi
             // 
@@ -163,6 +164,7 @@
             this.txtDiaChi.Name = "txtDiaChi";
             this.txtDiaChi.Size = new System.Drawing.Size(210, 20);
             this.txtDiaChi.TabIndex = 14;
+            this.txtDiaChi.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtDiaChi_KeyDown);
             // 
             // txtTenTG
             // 
@@ -170,6 +172,7 @@
             this.txtTenTG.Name = "txtTenTG";
             this.txtTenTG.Size = new System.Drawing.Size(210, 20);
             this.txtTenTG.TabIndex = 13;
+            this.txtTenTG.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTenTG_KeyDown);
             // 
             // txtMaTG
             // 

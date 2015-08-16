@@ -66,8 +66,10 @@ namespace QLTV.Use_Control
             binding();
         }
 
+        
         private void btnThem_Click(object sender, EventArgs e)
         {
+            
             add = true; update = false;
             groupControl1.Enabled = true;
             // Load NextID len textbox MaNXB
@@ -116,6 +118,24 @@ namespace QLTV.Use_Control
         private void btnHuy_Click(object sender, EventArgs e)
         {
             cnNXB_Load(sender, e);
+        }
+
+        private void txtTenNXB_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnLuu_Click(sender, e);
+        }
+
+        private void txtSdt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnLuu_Click(sender, e);
+        }
+
+        private void txtWebsite_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnLuu_Click(sender, e);
         }
     }
 }

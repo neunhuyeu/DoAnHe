@@ -160,6 +160,7 @@
             this.txtWebsite.Name = "txtWebsite";
             this.txtWebsite.Size = new System.Drawing.Size(215, 20);
             this.txtWebsite.TabIndex = 15;
+            this.txtWebsite.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtWebsite_KeyDown);
             // 
             // txtSdt
             // 
@@ -167,6 +168,7 @@
             this.txtSdt.Name = "txtSdt";
             this.txtSdt.Size = new System.Drawing.Size(215, 20);
             this.txtSdt.TabIndex = 14;
+            this.txtSdt.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSdt_KeyDown);
             // 
             // txtDiaChi
             // 
@@ -189,6 +191,7 @@
             this.txtTenNXB.Name = "txtTenNXB";
             this.txtTenNXB.Size = new System.Drawing.Size(215, 20);
             this.txtTenNXB.TabIndex = 11;
+            this.txtTenNXB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTenNXB_KeyDown);
             // 
             // labelControl1
             // 

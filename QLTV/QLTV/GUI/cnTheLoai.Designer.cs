@@ -146,6 +146,7 @@
             this.txtTenTL.Name = "txtTenTL";
             this.txtTenTL.Size = new System.Drawing.Size(210, 20);
             this.txtTenTL.TabIndex = 13;
+            this.txtTenTL.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTenTL_KeyDown);
             // 
             // txtMaTL
             // 
@@ -207,6 +208,7 @@
             this.txtGhiChu.Name = "txtGhiChu";
             this.txtGhiChu.Size = new System.Drawing.Size(210, 60);
             this.txtGhiChu.TabIndex = 18;
+            this.txtGhiChu.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtGhiChu_KeyDown);
             // 
             // labelControl7
             // 

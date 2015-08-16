@@ -78,5 +78,11 @@ namespace QLTV.GUI
         {
             cleantxt();
         }
+
+        private void txtReNewPass_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnDoiMK_Click(sender, e);
+        }
     }
 }

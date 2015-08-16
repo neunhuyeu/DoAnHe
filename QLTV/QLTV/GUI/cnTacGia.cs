@@ -113,5 +113,23 @@ namespace QLTV.Use_Control
         {
             cnTacGia_Load(sender, e);
         }
+
+        private void txtTenTG_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnLuu_Click(sender, e);
+        }
+
+        private void txtDiaChi_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnLuu_Click(sender, e);
+        }
+
+        private void txtSdt_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnLuu_Click(sender, e);
+        }
     }
 }

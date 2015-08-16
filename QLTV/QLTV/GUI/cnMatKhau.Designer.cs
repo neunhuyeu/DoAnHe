@@ -65,7 +65,7 @@
             this.groupControl1.Name = "groupControl1";
             this.groupControl1.ShowCaption = false;
             this.groupControl1.Size = new System.Drawing.Size(860, 450);
-            this.groupControl1.TabIndex = 0;
+            //this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Đổi Mật Khẩu";
             // 
             // lblThongBao
@@ -75,7 +75,7 @@
             this.lblThongBao.Location = new System.Drawing.Point(324, 252);
             this.lblThongBao.Name = "lblThongBao";
             this.lblThongBao.Size = new System.Drawing.Size(141, 15);
-            this.lblThongBao.TabIndex = 16;
+            //this.lblThongBao.TabIndex = 16;
             this.lblThongBao.Text = "Mật khẩu chưa được đổi !";
             // 
             // btnDoiMK
@@ -86,7 +86,7 @@
             this.btnDoiMK.Location = new System.Drawing.Point(246, 283);
             this.btnDoiMK.Name = "btnDoiMK";
             this.btnDoiMK.Size = new System.Drawing.Size(120, 38);
-            this.btnDoiMK.TabIndex = 15;
+            this.btnDoiMK.TabIndex = 3;
             this.btnDoiMK.Text = "Đổi Mật Khẩu";
             this.btnDoiMK.Click += new System.EventHandler(this.btnDoiMK_Click);
             // 
@@ -98,7 +98,7 @@
             this.btnHuy.Location = new System.Drawing.Point(419, 283);
             this.btnHuy.Name = "btnHuy";
             this.btnHuy.Size = new System.Drawing.Size(120, 38);
-            this.btnHuy.TabIndex = 14;
+            this.btnHuy.TabIndex = 4;
             this.btnHuy.Text = "Hủy Bỏ";
             this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
@@ -107,21 +107,22 @@
             this.txtReNewPass.Location = new System.Drawing.Point(324, 212);
             this.txtReNewPass.Name = "txtReNewPass";
             this.txtReNewPass.Size = new System.Drawing.Size(242, 20);
-            this.txtReNewPass.TabIndex = 13;
+            this.txtReNewPass.TabIndex = 2;
+            this.txtReNewPass.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtReNewPass_KeyDown);
             // 
             // txtNewPass
             // 
             this.txtNewPass.Location = new System.Drawing.Point(324, 167);
             this.txtNewPass.Name = "txtNewPass";
             this.txtNewPass.Size = new System.Drawing.Size(242, 20);
-            this.txtNewPass.TabIndex = 12;
+            this.txtNewPass.TabIndex = 1;
             // 
             // txtOldPass
             // 
             this.txtOldPass.Location = new System.Drawing.Point(324, 122);
             this.txtOldPass.Name = "txtOldPass";
             this.txtOldPass.Size = new System.Drawing.Size(242, 20);
-            this.txtOldPass.TabIndex = 11;
+            this.txtOldPass.TabIndex = 0;
             // 
             // labelControl4
             // 
@@ -129,7 +130,7 @@
             this.labelControl4.Location = new System.Drawing.Point(204, 215);
             this.labelControl4.Name = "labelControl4";
             this.labelControl4.Size = new System.Drawing.Size(98, 15);
-            this.labelControl4.TabIndex = 10;
+            //this.labelControl4.TabIndex = 10;
             this.labelControl4.Text = "Nhập lại Mật khẩu";
             // 
             // labelControl3
@@ -138,7 +139,7 @@
             this.labelControl3.Location = new System.Drawing.Point(204, 170);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(79, 15);
-            this.labelControl3.TabIndex = 9;
+            //this.labelControl3.TabIndex = 9;
             this.labelControl3.Text = "Mật Khẩu Mới";
             // 
             // labelControl2
@@ -147,7 +148,7 @@
             this.labelControl2.Location = new System.Drawing.Point(204, 125);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(72, 15);
-            this.labelControl2.TabIndex = 8;
+            //this.labelControl2.TabIndex = 8;
             this.labelControl2.Text = "Mật Khẩu Cũ";
             // 
             // labelControl1
@@ -157,7 +158,7 @@
             this.labelControl1.Location = new System.Drawing.Point(362, 65);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(117, 22);
-            this.labelControl1.TabIndex = 7;
+            //this.labelControl1.TabIndex = 7;
             this.labelControl1.Text = "Đổi Mật Khẩu";
             // 
             // cnMatKhau

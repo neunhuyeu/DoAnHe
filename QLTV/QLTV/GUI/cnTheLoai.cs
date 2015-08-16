@@ -111,5 +111,17 @@ namespace QLTV.Use_Control
         {
             cnTheLoai_Load(sender, e);
         }
+
+        private void txtTenTL_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnLuu_Click(sender, e);
+        }
+
+        private void txtGhiChu_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnLuu_Click(sender, e);
+        }
     }
 }

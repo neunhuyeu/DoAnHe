@@ -220,6 +220,7 @@
             this.txtPhatQH.Name = "txtPhatQH";
             this.txtPhatQH.Size = new System.Drawing.Size(210, 20);
             this.txtPhatQH.TabIndex = 41;
+            this.txtPhatQH.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPhatQH_KeyDown);
             this.txtPhatQH.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhatQH_KeyPress);
             // 
             // txtPhatHong
@@ -228,6 +229,7 @@
             this.txtPhatHong.Name = "txtPhatHong";
             this.txtPhatHong.Size = new System.Drawing.Size(210, 20);
             this.txtPhatHong.TabIndex = 40;
+            this.txtPhatHong.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPhatHong_KeyDown);
             this.txtPhatHong.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtPhatHong_KeyPress);
             // 
             // labelControl9

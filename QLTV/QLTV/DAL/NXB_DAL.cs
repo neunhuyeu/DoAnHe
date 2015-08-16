@@ -35,11 +35,11 @@ namespace QLTV.DAL
                 MessageBox.Show("Tên Nhà Xuất bản không hợp lệ ! ");
                 return false;
             }
-            if (nxb.DiaChiNXB.Equals(""))
-            {
-                MessageBox.Show("Địa chỉ Nhà Xuất bản không hợp lệ ! ");
-                return false;
-            }
+            //if (nxb.DiaChiNXB.Equals(""))
+            //{
+            //    MessageBox.Show("Địa chỉ Nhà Xuất bản không hợp lệ ! ");
+            //    return false;
+            //}
             return true;
         }
         //Kiểm tra tồn tại của Mã NXB

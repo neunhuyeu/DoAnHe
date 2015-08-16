@@ -174,8 +174,8 @@ namespace QLTV.DAL
             
             string sql = "SELECT * FROM " + nameTable + " WHERE " + nameFiled + " = '" + value + "'";
             DataTable dtTemp = new DataTable();
-            
-            dtTemp = LoadData(sql);
+
+            dtTemp = getdata(sql);
 
             if (dtTemp.Rows.Count > 0)
                 return true;
@@ -190,6 +190,35 @@ namespace QLTV.DAL
             DataTable dtTemp = new DataTable();
 
             dtTemp = getdata(sql);
+            if(dtTemp.Rows.Count==0)
+            {
+                if(nameFiled=="MaTL")
+                    return "TL0000";
+                else if (nameFiled == "MaTG")
+                {
+                    return "TG0000";
+                }
+                else if (nameFiled == "MaSach")
+                {
+                    return "MS0000";
+                }
+                else if (nameFiled == "MaPhieu")
+                {
+                    return "PM0000";
+                }
+                else if (nameFiled == "MaNXB")
+                {
+                    return "NXB000";
+                }
+                else if (nameFiled == "MaNV")
+                {
+                    return "NV0000";
+                }
+                else if (nameFiled == "MaDG")
+                {
+                    return "DG0000";
+                }
+            }
             // thực hiện câu truy vấn trên
             return dtTemp.Rows[0][nameFiled].ToString();
         }

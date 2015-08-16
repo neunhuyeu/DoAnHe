@@ -136,6 +136,7 @@
             this.txtTenSach.Name = "txtTenSach";
             this.txtTenSach.Size = new System.Drawing.Size(250, 20);
             this.txtTenSach.TabIndex = 37;
+            this.txtTenSach.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtTenSach_KeyDown);
             // 
             // txtMaSach
             // 
@@ -143,6 +144,7 @@
             this.txtMaSach.Name = "txtMaSach";
             this.txtMaSach.Size = new System.Drawing.Size(250, 20);
             this.txtMaSach.TabIndex = 36;
+            this.txtMaSach.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMaSach_KeyDown);
             // 
             // radTheLoai
             // 

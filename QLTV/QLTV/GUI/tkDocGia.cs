@@ -80,5 +80,23 @@ namespace QLTV.GUI
         {
             tkDocGia_Load(sender, e);
         }
+
+        private void txtMaDG_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnTim_Click(sender, e);
+        }
+
+        private void txtTenDG_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnTim_Click(sender, e);
+        }
+
+        private void txtDiaChi_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnTim_Click(sender, e);
+        }
     }
 }

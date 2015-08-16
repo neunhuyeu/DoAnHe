@@ -26,6 +26,7 @@ namespace QLTV
                     return prefixID + zeroNumber + nextID.ToString();
                 }
             }
+
             return prefixID + nextID;
         }
 
